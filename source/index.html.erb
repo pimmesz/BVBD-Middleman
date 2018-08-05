@@ -43,13 +43,27 @@ title: Le Wagon - Middleman
 </div>
 
 <div class="container" id="home-projects">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <p>
+        Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.  Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.
+
+        Haalbaarheid; Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.
+        Definitief ontwerp; Tijdens deze fase gaan we inzoomen op uw specifieke wensen en uitstraling. We stemmen materialen, bouwmethode, constructie en (installatie-)techniek op elkaar af.
+        Omgevingsvergunning; Uw plan wordt verder uitgewerkt. De tekeningen worden opgesteld, zodat de gemeente het plan kan toetsen op bouwbesluit eisen en overige planologische eisen.
+      Uitvoeringsvoorbereiding; Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= image_tag "img1.jpeg", :class => "description-img"%>
+    </div>
+  </div>
   <h2 class="text-center">Recent projects</h2>
   <div class="row">
     <% data.projects.each do |owner, flat| %>
     <%=  %>
     <% if flat.type == "ontwerp" %>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path flat.images.sample %>);">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path flat.images.first %>);">
         <div class="card-category"><%= flat.city_name %></div>
         <div class="card-description">
           <h5><%= flat.name %></h5>
@@ -70,23 +84,57 @@ title: Le Wagon - Middleman
 </div>
 
 <div class="container" id="home-projects">
-  <h2 class="text-center">Recent projects</h2>
   <div class="row">
-    <% data.projects.each do |owner, flat| %>
-    <% if flat.type == "bouw" %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path flat.images.sample %>);">
-        <div class="card-category"><%= flat.city_name %></div>
-        <div class="card-description">
-          <h4><%= flat.name %></h4>
-        </div>
-        <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
+   <div class="col-xs-12 col-sm-4">
+    <%= image_tag "img1.jpeg", :class => "description-img"%>
+  </div>
+  <div class="col-xs-12 col-sm-8">
+    <p>
+      Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.  Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.
+
+      Haalbaarheid; Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.
+      Definitief ontwerp; Tijdens deze fase gaan we inzoomen op uw specifieke wensen en uitstraling. We stemmen materialen, bouwmethode, constructie en (installatie-)techniek op elkaar af.
+      Omgevingsvergunning; Uw plan wordt verder uitgewerkt. De tekeningen worden opgesteld, zodat de gemeente het plan kan toetsen op bouwbesluit eisen en overige planologische eisen.
+    Uitvoeringsvoorbereiding; Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</p>
   </div>
 </div>
+<h2 class="text-center">Recent projects</h2>
+<div class="row">
+  <% data.projects.each do |owner, flat| %>
+  <% if flat.type == "bouw" %>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+      <div class="card-category"><%= flat.city_name %></div>
+      <div class="card-description">
+        <h4><%= flat.name %></h4>
+      </div>
+      <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+</div>
+
+<a id="vastgoed"></a>
+<div class="divide-banner" style="background-color: rgba(209,104,41,1)">
+  <div class="divide-banner-text">
+    <h2>vastgoed</h2>
+  </div>
+</div>
+
+<div class="container" id="home-projects">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <%= image_tag "img1.jpeg", :class => "description-img"%>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <p>
+      Nog voor de dotcom-crisis van 2001 zagen wij vastgoed als een veilige belegging. We initieerde in 1999 een vastgoedproject dat we namens onze opdrachtgever heden ten dagen nog steeds exploiteren. Dit geeft ons de ruime ervaring die u mag verwachten van een vastgoedpartner. In de periode van meer dan 15 jaar hebben wij verhuurpanden; bemiddeld, geinitieerd en geexploiteerd. We kijken naar elk object met onze eigen blik. We kijken naar de mogelijkheden van het pand, de locatie en de bijbehorend marktsegment. Wat is de optimale gebouwconfiguratie voor het beoogde wijze van exploitatie.  Basale studentenkamers, compacte studios of juist appartementen in het liberale segment van de verhuurmarkt. Heeft u een pand dat u wil transformeren? Heeft u een pand op het oog als belegging? Laat ons u adviseren over de mogelijkheden en het toekomstig rendement.</p>
+    </div>
+  </div>
+</div>
+
 
 <!-- <form action="https://getsimpleform.com/messages?form_api_token=<form_api_token>" method="post">
 
@@ -94,4 +142,4 @@ title: Le Wagon - Middleman
 
   <input type='submit' value='Test form' />
 </form>
- -->
+-->
