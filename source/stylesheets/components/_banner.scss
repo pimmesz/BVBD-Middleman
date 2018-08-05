@@ -2,7 +2,7 @@
   color: white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,20 +27,28 @@
 
 .divide-banner {
   height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
-  background-size: cover;
-  background-position: center;
+}
+
+.divide-banner-skills-container {
+  display: flex;
+  height: 350px;
+  margin: 20px 0px 100px 0px;
+}
+
+.divide-banner-skills {
+  color: white;
+  width: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.divide-banner-text {
-  text-align: center;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 

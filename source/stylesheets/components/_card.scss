@@ -1,9 +1,15 @@
-.container{
-  margin: 50px;
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100vw;
+  margin-bottom: 100px;
 }
 
 .card {
-  height: 175px;
+  height: 200px;
+  width: 200px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -13,6 +19,7 @@
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
   transition: all .5s;
+
   -moz-transform: scale(1,1);
   -webkit-transform: scale(1,1);
   transform: scale(1,1);
@@ -20,8 +27,12 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+}
 
-  margin: 10px;
+.transition {
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .card:hover {
@@ -45,11 +56,7 @@
   font-size: 15px;
   text-transform: uppercase;
 }
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
+
 .card-description h2 {
   font-size: 24px;
 }
@@ -70,4 +77,15 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.project-card {
+  width: 200px;
+  margin: 10px;
+}
+
+.card-description {
+  margin-top: 10px;
+  height: 75px;
+  text-align: center;
 }
