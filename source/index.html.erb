@@ -2,14 +2,51 @@
 title: Le Wagon - Middleman
 ---
 
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Le Wagon Berlin</h1>
+    <p>Learn to code with us in Berlin</p>
+    <%= link_to "Meet the team", "about.html", class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="container" id="home-projects">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h1 class="text-center">Ontwerp</h1>
+      <h1>Ontwerp</h1>
+      <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h1 class="text-center">Bouw</h1>
+      <h1>Bouw</h1>
+      <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h1 class="text-center">Vastgoed</h1>
+      <h1>Vastgoed</h1>
+      <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container" id="home-projects">
+  <h2 class="text-center">Recent projects</h2>
+  <div class="row">
+    <% data.projects.each do |owner, flat| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+        <div class="card-category"><%= flat.city_name %></div>
+        <div class="card-description">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.description %></p>
+        </div>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class:"card-user" %>
+        <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
