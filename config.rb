@@ -17,9 +17,11 @@ configure :build do
 end
 
 activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
   deploy.build_before = true
-  deploy.deploy_method = :git
 end
+
 
 data.projects.each do |name, project|
   proxy "/projects/#{name}.html", "/projects/show.html", locals: { description: project.description, name: project.name, images: project.images }, ignore: true
