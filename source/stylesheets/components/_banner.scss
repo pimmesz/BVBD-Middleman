@@ -25,3 +25,22 @@
   margin-bottom: 30px;
 }
 
+.divide-banner {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divide-banner-text {
+  // margin: 10px;
+}
+
