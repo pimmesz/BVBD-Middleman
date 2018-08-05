@@ -1,6 +1,11 @@
 var ontwerp = document.querySelector(".divide-banner-skills.ontwerp")
+var ontwerpText = document.querySelector(".divide-banner-skills.ontwerp").querySelector("#text")
+
 var bouw = document.querySelector(".divide-banner-skills.bouw")
+var bouwText = document.querySelector(".divide-banner-skills.bouw").querySelector("#text")
+
 var vastgoed = document.querySelector(".divide-banner-skills.vastgoed")
+var vastgoedText = document.querySelector(".divide-banner-skills.vastgoed").querySelector("#text")
 
 ontwerp.addEventListener("mouseover", ontwerpHover);
 ontwerp.addEventListener("mouseout", ontwerpOut);
@@ -11,42 +16,42 @@ vastgoed.addEventListener("mouseout", vastgoedOut);
 
 function ontwerpHover(){
   bouw.style.width = "10%";
-  bouw.children[0].style.opacity = 0;
+  bouwText.style.opacity = 0;
   vastgoed.style.width = "10%";
-  vastgoed.children[0].style.opacity = 0;
+  vastgoedText.style.opacity = 0;
 }
 
 function ontwerpOut(){
   bouw.style.width = "100%";
-  bouw.children[0].style.opacity = 1;
+  bouwText.style.opacity = 1;
   vastgoed.style.width = "100%";
-  vastgoed.children[0].style.opacity = 1;
+  vastgoedText.style.opacity = 1;
 }
 
 function bouwHover(){
   ontwerp.style.width = "10%";
-  ontwerp.children[0].style.opacity = 0;
+  ontwerpText.style.opacity = 0;
   vastgoed.style.width = "10%";
-  vastgoed.children[0].style.opacity = 0;
+  vastgoedText.style.opacity = 0;
 }
 
 function bouwOut(){
   ontwerp.style.width = "100%";
-  ontwerp.children[0].style.opacity = 1;
+  ontwerpText.style.opacity = 1;
   vastgoed.style.width = "100%";
-  vastgoed.children[0].style.opacity = 1;
+  vastgoedText.style.opacity = 1;
 }
 
 function vastgoedHover(){
   ontwerp.style.width = "10%";
-  ontwerp.children[0].style.opacity = 0;
+  ontwerpText.style.opacity = 0;
   bouw.style.width = "10%";
-  bouw.children[0].style.opacity = 0;
+  bouwText.style.opacity = 0;
 }
 
 function vastgoedOut(){
   ontwerp.style.width = "100%";
-  ontwerp.children[0].style.opacity = 1;
+  ontwerpText.style.opacity = 1;
   bouw.style.width = "100%";
-  bouw.children[0].style.opacity = 1;
+  bouwText.style.opacity = 1;
 }
