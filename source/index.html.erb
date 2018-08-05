@@ -6,84 +6,92 @@ title: Le Wagon - Middleman
   <div class="banner-content">
     <h1>BVBD</h1>
     <p>Wij zijn een multidicplinair adviesbureau dat ervaring, strategie en profes- sionaliteit combineerd met een passie voor bouwen en gebouw.</p>
-    <%= link_to "Wat kan ik voor je doen?", "about.html", class: "btn btn-primary" %>
+    <%= link_to "Wat kan ik voor je doen?", "#wat-kan-ik-doen", class: "btn btn-primary" %>
   </div>
 </div>
 
+<a id="wat-kan-ik-doen"></a>
 <div class="divide-banner" style="background-color: rgba(209,104,41,1)">
   <div class="divide-banner-text">
     <h2>Wat kan ik voor je doen?</h2>
   </div>
 </div>
 
-
-<a id="ontwerp"></a>
 <div class="container" id="home-projects">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <h1 class="text-center">Ontwerp</h1>
+      <!-- <i class="fa fa-thumbs-up"></i> -->
       <h1>Ontwerp</h1>
       <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <h1 class="text-center">Bouw</h1>
       <h1>Bouw</h1>
       <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <h1 class="text-center">Vastgoed</h1>
       <h1>Vastgoed</h1>
       <h5>Cras dapibus. Vivamus elem nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
     </div>
   </div>
 </div>
 
-<h1>Ontwerp</h1>
+<a id="ontwerp"></a>
+<div class="divide-banner" style="background-color: rgba(209,104,41,1)">
+  <div class="divide-banner-text">
+    <h2>Ontwerp</h2>
+  </div>
+</div>
+
 <div class="container" id="home-projects">
   <h2 class="text-center">Recent projects</h2>
   <div class="row">
     <% data.projects.each do |owner, flat| %>
-      <% if flat.type == "ontwerp" %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
-          <div class="card-category"><%= flat.city_name %></div>
-          <div class="card-description">
-            <h5><%= flat.name %></h5>
-          </div>
-          <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
+    <%=  %>
+    <% if flat.type == "ontwerp" %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path flat.images.sample %>);">
+        <div class="card-category"><%= flat.city_name %></div>
+        <div class="card-description">
+          <h5><%= flat.name %></h5>
         </div>
+        <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
       </div>
-      <% end %>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
 
-<h1>Bouw</h1>
+<a id="bouw"></a>
+<div class="divide-banner" style="background-color: rgba(209,104,41,1)">
+  <div class="divide-banner-text">
+    <h2>Bouw</h2>
+  </div>
+</div>
+
 <div class="container" id="home-projects">
   <h2 class="text-center">Recent projects</h2>
   <div class="row">
     <% data.projects.each do |owner, flat| %>
-      <% if flat.type == "bouw" %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
-          <div class="card-category"><%= flat.city_name %></div>
-          <div class="card-description">
-            <h4><%= flat.name %></h4>
-          </div>
-          <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
+    <% if flat.type == "bouw" %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path flat.images.sample %>);">
+        <div class="card-category"><%= flat.city_name %></div>
+        <div class="card-description">
+          <h4><%= flat.name %></h4>
         </div>
+        <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
       </div>
-      <% end %>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
 
-<form action="https://getsimpleform.com/messages?form_api_token=<form_api_token>" method="post">
-
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='about.html' />
+<!-- <form action="https://getsimpleform.com/messages?form_api_token=<form_api_token>" method="post">
 
   <input type='text' name='test' />
 
   <input type='submit' value='Test form' />
 </form>
+ -->
