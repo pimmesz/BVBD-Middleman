@@ -1,32 +1,27 @@
 <% if current_page.path == "index.html" %>
+  <!-- Start with invisible background and light logo on homepage -->
   <div class="navbar-wagon navbar-invisible">
+
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+    <%= image_tag "images/bvbd-logo-light.png", alt: "logo" %>
+    </a>
 <% else %>
+  <!-- Start with background and dark logo on any other page -->
   <div class="navbar-wagon navbar-visible">
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+    <%= image_tag "images/bvbd-logo-dark.png", alt: "logo" %>
+    </a>
 <% end %>
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%= image_tag "images/logo.png", alt: "logo" %>
-  </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
-
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
+    <a href="#ontwerp" class="navbar-wagon-item navbar-wagon-link">Ontwerp</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Bouw</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Vastgoed</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a>
   </div>
 
   <!-- Dropdown appearing on mobile only -->

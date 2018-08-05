@@ -1,0 +1,37 @@
+---
+title: Le Wagon - Project
+---
+
+<div class="container" id="home-projects">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <h1>Ontwerp</h1>
+      <p><b><%= name %></b></p>
+      <p><%= description %></p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <% images.each_with_index do |image, index| %>
+        <div class="mySlides fade">
+          <div class="numbertext"><%= index %> / <%= images.length %></div>
+          <%= image_tag image, :class => "slider-img"%>
+
+        </div>
+      <% end %>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+

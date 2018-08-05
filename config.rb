@@ -20,3 +20,9 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
 end
+
+data.projects.each do |name, project|
+  p name
+  # p project
+  proxy "/projects/#{name}.html", "/projects/show.html", locals: { description: project.description, name: project.name, images: project.images }, ignore: true
+end

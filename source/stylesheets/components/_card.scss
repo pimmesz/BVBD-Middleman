@@ -10,7 +10,26 @@
   color: white;
   position: relative;
   margin: 10px;
+
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -moz-transform: scale(1,1);
+  -webkit-transform: scale(1,1);
+  transform: scale(1,1);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
+
+.card:hover {
+  color: white;
+  -moz-transform: scale(1.05,1.05);
+  -webkit-transform: scale(1.05,1.05);
+  transform: scale(1.05,1.05);
+}
+
 .card-user {
   position: absolute;
   right: 10px;
