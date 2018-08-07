@@ -3,17 +3,17 @@
   <div class="navbar-wagon navbar-invisible" data-logo-light="<%= image_path 'images/bvbd-logo-light.png' %>" data-logo-dark="<%= image_path 'images/bvbd-logo-dark.png' %>">
 
     <!-- Logo -->
-    <a href="/" class="navbar-wagon-brand">
-    <%= image_tag "images/bvbd-logo-light.png", alt: "logo", id: "navbar-logo" %>
-    </a>
+    <% link_to "index.html", class: "navbar-wagon-brand" do %>
+      <%= image_tag "images/bvbd-logo-light.png", alt: "logo", id: "navbar-logo" %>
+    <% end %>
 <% else %>
   <!-- Start with background and dark logo on any other page -->
   <div class="navbar-wagon navbar-visible" >
     <!-- Logo -->
-    <a href="/" class="navbar-wagon-brand">
-    <%= image_tag "images/bvbd-logo-dark.png", alt: "logo", id: "navbar-logo" %>
-    </a>
-<% end %>
+    <% link_to "index.html", class: "navbar-wagon-brand" do %>
+      <%= image_tag "images/bvbd-logo-dark.png", alt: "logo", id: "navbar-logo" %>
+    <% end %>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
