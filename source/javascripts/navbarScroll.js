@@ -1,4 +1,4 @@
-if(window.location.pathname == "/"){
+if(window.location.pathname == "/" || window.location.pathname == "/BVBD-Middleman/"){
   window.onscroll = function() {myFunction()};
 
   var banner = document.querySelector(".banner")
