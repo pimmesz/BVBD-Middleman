@@ -53,25 +53,42 @@ label {
 // Ontwerp, bouw, vastgoed extra info on homepage
 
 .ontwerp-container {
-  margin: 20px 0px 100px 0px;
-  padding: 20px;
+  margin: 20px 0px 0px 0px;
+  padding: 50px 0px 50px 0px;
+  background-color: #1b9aaa;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ontwerp-punten {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 10px 0px 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px 10px 0px;
 }
 
 .ontwerp-punt {
   width: 25%;
   padding: 10px;
+
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.ontwerp-punt img {
+  height: 50px;
 }
 
 .ontwerp-info {
   display: flex;
-  margin: 100px 0px 100px 0px;
 }
 
 .ontwerp-foto {
@@ -92,6 +109,10 @@ label {
 }
 
 .ontwerp-text {
-  width: 50%;
-  padding: 0px 30px 0px 30px;
+  padding: 0px 30px 50px 30px;
+  width: 50vw;
 }
+
+.dark-blue {
+   color: $dark-blue;
+ }
