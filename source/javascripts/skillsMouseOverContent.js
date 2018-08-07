@@ -1,4 +1,4 @@
-if(window.location.pathname == "/"){
+if(window.location.pathname == "/" || window.location.pathname == "/BVBD-Middleman/"){
   var ontwerp = document.querySelector(".divide-banner-skills.ontwerp")
   var ontwerpText = document.querySelector(".divide-banner-skills.ontwerp").querySelector("#text")
 
