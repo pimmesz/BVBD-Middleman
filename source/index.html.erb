@@ -43,32 +43,37 @@ title: BVBD - Home
 <h2 class="text-center">Werk</h2>
 <div class="card-container">
   <% data.projects.each do |owner, project| %>
-    <% link_to "projects/#{owner}.html", class: "card-link" do %>
-      <div class="card" style="background-image: linear-gradient(-225deg, rgba(27,154,170,0.1) 0%, rgba(27,154,170,0.3) 50%), url(<%= image_path project.images.first %>);">
-        <div class="overlay">
-          <div class="card-category"><%= project.city_name %></div>
-          <p><%= project.name %></p>
-        </div>
-      </div>
-    <% end %>
+  <% link_to "projects/#{owner}.html", class: "card-link" do %>
+  <div class="card" style="background-image: linear-gradient(-225deg, rgba(27,154,170,0.1) 0%, rgba(27,154,170,0.3) 50%), url(<%= image_path project.images.first %>);">
+    <div class="overlay">
+      <div class="card-category"><%= project.city_name %></div>
+      <p><%= project.name %></p>
+    </div>
+  </div>
+  <% end %>
   <% end %>
 </div>
 
 <a id="ontwerp"></a>
-<h2 class="text-center">Wat kan ik voor je doen</h2>
-<div class="ontwerp-info">
-  <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'ontwerp.jpg' %>);" class="ontwerp-foto">
-    <h1>Ontwerp</h1>
+<h2 class="text-center">Ontwerp</h2>
+
+<div class="ontwerp-container">
+  <p>Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.  Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.</p>
+  <div class="ontwerp-punten">
+    <div class="ontwerp-punt" style="background-color: rgba(255,255,255,1)">
+      <p><b>Haalbaarheid</b>; Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.</p>
+    </div>
+    <div class="ontwerp-punt" style="background-color: rgba(50,255,255,1)">
+      <p><b>Definitief ontwerp</b>; Tijdens deze fase gaan we inzoomen op uw specifieke wensen en uitstraling. We stemmen materialen, bouwmethode, constructie en (installatie-)techniek op elkaar af.</p>
+    </div>
+    <div class="ontwerp-punt" style="background-color: rgba(255,30,20,1)">
+      <p><b>Omgevingsvergunning</b>; Uw plan wordt verder uitgewerkt. De tekeningen worden opgesteld, zodat de gemeente het plan kan toetsen op bouwbesluit eisen en overige planologische eisen.</p>
+    </div>
+    <div class="ontwerp-punt" style="background-color: rgba(255,255,255,1)">
+      <p><b>Uitvoeringsvoorbereiding</b>; Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</p>
+    </div>
   </div>
-  <div class="ontwerp-text">
-    <p>Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.  Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.</p>
-    <ol>
-      <li><b>Haalbaarheid</b>; Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.</li>
-      <li><b>Definitief ontwerp</b>; Tijdens deze fase gaan we inzoomen op uw specifieke wensen en uitstraling. We stemmen materialen, bouwmethode, constructie en (installatie-)techniek op elkaar af.</li>
-      <li><b>Omgevingsvergunning</b>; Uw plan wordt verder uitgewerkt. De tekeningen worden opgesteld, zodat de gemeente het plan kan toetsen op bouwbesluit eisen en overige planologische eisen.</li>
-      <li><b>Uitvoeringsvoorbereiding</b>; Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</li>
-    </ol>
-  </div>
+</div>
 </div>
 
 <a id="bouw"></a>
@@ -77,7 +82,7 @@ title: BVBD - Home
     <p>In 2009 zijn wij gestart als bouwkundig ingenieursbureau. Als ingenieursbureau hebben wij grote kennis van bouwtechniek, klimaatbehandeling en bouwmaterialen. Over de jaren hebben wij ons steeds breder ontwikkeld. Al vanaf het begin oprichting zagen we de noodzaak om verantwoordelijkheid te nemen en betrokken te zijn bij het bouwproces. Naast dat wij de ontwerpers waren van het project namen we ook het bouwen ervan ter hand. We konden onze kennis inzetten om tijdens de bouw efficient en kostenbesparend te bouwen.  Dit werd verder uitgebouwd door samenwerkingen met verschillende aannemers in de regio van onze projecten. Hierdoor hebben wij een breed netwerk van specialisten aan ons weten te binden. Van dakdekkers tot specialisten in funderingstechniek  en van interieurbouwers tot installatietechniek. Voor elk bouwproject hebben wij een passend antwoord. U krijgt van ons een duidelijke offerte met een scherpe prijs.
     </p>
   </div>
-    <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'bouw.jpg' %>);" class="ontwerp-foto">
+  <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'bouw.jpg' %>);" class="ontwerp-foto">
     <h1>Bouw</h1>
   </div>
 </div>
@@ -95,18 +100,65 @@ title: BVBD - Home
 
 <a id="contact"></a>
 <h2 class="text-center">Contact</h2>
-<div class="container" id="home-projects">
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-4 col-sm-4">
 
-      <iframe height="1118"
-      allowTransparency="true"
-      frameborder="0"
-      scrolling="no"
-      style="width:100%;border:none"
-      src="https://pimmesz.wufoo.com/embed/zedhxf70oxctnw/">
-    </iframe>
+<div class="contact-form-container">
+  <div class="contact-form-div">
+    <h3>Stel een vraag</h3>
+    <form method="POST" action="https://formspree.io/hello@pim.gg" class="contact-form">
+      <input type="hidden" name="_language" value="nl" />
+      <input type="hidden" name="_subject" value="BVBD - Offerte aanvraag" />
+      <input type="hidden" name="_next" value="http://localhost:4567/" />
+      <input type="text" name="_gotcha" style="display:none" />
 
+      <input class="form-control" type="email" name="_replyto" placeholder="Email" />
+      <input class="form-control" type="text" name="name" placeholder="Naam">
+      <input class="form-control" type="tel" name="tel" placeholder="Telefoonnummer">
+
+      <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+
+      <button type="submit" class="contact-form-button">Verstuur</button>
+    </form>
   </div>
-</div>
+
+  <div class="contact-form-div">
+    <h3>Offerte aanvragen</h3>
+    <form method="POST" action="https://formspree.io/hello@pim.gg" class="contact-form">
+      <input type="hidden" name="_language" value="nl" />
+      <input type="hidden" name="_subject" value="BVBD - Offerte aanvraag" />
+      <input type="hidden" name="_next" value="http://localhost:4567/" />
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <input class="form-control" type="email" name="_replyto" placeholder="Email" />
+      <input class="form-control" type="text" name="name" placeholder="Naam">
+      <input class="form-control" type="tel" name="tel" placeholder="Telefoonnummer">
+
+      <fieldset>
+        <p><b>Particulier of bedrijf?</b></p>
+        <input type="checkbox" name="particulier_of_bedrijf" value="Particulier">Particulier<br>
+        <input type="checkbox" name="particulier_of_bedrijf" value="Bedrijf">Bedrijf<br>
+      </fieldset>
+
+      <fieldset>
+        <p><b>Ik heb interesse in</b></p>
+        <input type="checkbox" name="interesse_in" value="Ontwerp">Ontwerp<br>
+        <input type="checkbox" name="interesse_in" value="Bouw">Bouw<br>
+        <input type="checkbox" name="interesse_in" value="Vastgoed">Vastgoed<br>
+      </fieldset>
+
+      <fieldset>
+        <p><b>Werkzaamheden</b></p>
+        <input type="checkbox" name="werkzaamheden" value="Verbouw">Verbouw<br>
+        <input type="checkbox" name="werkzaamheden" value="Aan- en opbouw">Aan- en opbouw<br>
+        <input type="checkbox" name="werkzaamheden" value="Nieuwbouw">Nieuwbouw<br>
+        <input type="checkbox" name="werkzaamheden" value="Bouwtechnisch advies">Bouwtechnisch advies<br>
+        <input type="checkbox" name="werkzaamheden" value="Bouwtechnische keuring">Bouwtechnische keuring<br>
+        <input type="checkbox" name="werkzaamheden" value="Splitsing appartementen">Splitsing appartementen<br>
+        <input type="checkbox" name="werkzaamheden" value="Legalisatie bestaande situatie">Legalisatie bestaande situatie<br>
+        <input type="checkbox" name="werkzaamheden" value="Verhuurbemiddeling">Verhuurbemiddeling<br>
+        <input type="checkbox" name="werkzaamheden" value="Vastgoed exploitatie">Vastgoed exploitatie<br>
+      </fieldset>
+
+      <button type="submit" class="contact-form-button">Verstuur</button>
+    </form>
+  </div>
 </div>

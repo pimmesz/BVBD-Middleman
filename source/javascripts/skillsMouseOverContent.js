@@ -16,44 +16,44 @@ if(window.location.pathname == "/" || window.location.pathname == "/BVBD-Middlem
   vastgoed.addEventListener("mouseout", vastgoedOut);
 
   function ontwerpHover(){
-    bouw.style.width = "10%";
+    bouw.style.width = "50%";
     bouwText.style.opacity = 0;
-    vastgoed.style.width = "10%";
+    vastgoed.style.width = "50%";
     vastgoedText.style.opacity = 0;
   }
 
   function ontwerpOut(){
-    bouw.style.width = "100%";
+    bouw.style.width = "75%";
     bouwText.style.opacity = 1;
-    vastgoed.style.width = "100%";
+    vastgoed.style.width = "75%";
     vastgoedText.style.opacity = 1;
   }
 
   function bouwHover(){
-    ontwerp.style.width = "10%";
+    ontwerp.style.width = "50%";
     ontwerpText.style.opacity = 0;
-    vastgoed.style.width = "10%";
+    vastgoed.style.width = "50%";
     vastgoedText.style.opacity = 0;
   }
 
   function bouwOut(){
-    ontwerp.style.width = "100%";
+    ontwerp.style.width = "75%";
     ontwerpText.style.opacity = 1;
-    vastgoed.style.width = "100%";
+    vastgoed.style.width = "75%";
     vastgoedText.style.opacity = 1;
   }
 
   function vastgoedHover(){
-    ontwerp.style.width = "10%";
+    ontwerp.style.width = "50%";
     ontwerpText.style.opacity = 0;
-    bouw.style.width = "10%";
+    bouw.style.width = "50%";
     bouwText.style.opacity = 0;
   }
 
   function vastgoedOut(){
-    ontwerp.style.width = "100%";
+    ontwerp.style.width = "75%";
     ontwerpText.style.opacity = 1;
-    bouw.style.width = "100%";
+    bouw.style.width = "75%";
     bouwText.style.opacity = 1;
   }
 }

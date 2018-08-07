@@ -52,6 +52,23 @@ label {
 
 // Ontwerp, bouw, vastgoed extra info on homepage
 
+.ontwerp-container {
+  margin: 20px 0px 100px 0px;
+  padding: 20px;
+}
+
+.ontwerp-punten {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+
+.ontwerp-punt {
+  width: 25%;
+  padding: 10px;
+}
+
 .ontwerp-info {
   display: flex;
   margin: 100px 0px 100px 0px;
