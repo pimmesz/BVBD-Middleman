@@ -49,3 +49,32 @@ label {
   border-radius: 200px;
   margin: 10px;
 }
+
+// Ontwerp, bouw, vastgoed extra info on homepage
+
+.ontwerp-info {
+  display: flex;
+  margin: 100px 0px 100px 0px;
+}
+
+.ontwerp-foto {
+  height: 75vh;
+  width: 50%;
+
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+  }
+}
+
+.ontwerp-text {
+  width: 50%;
+  padding: 0px 30px 0px 30px;
+}

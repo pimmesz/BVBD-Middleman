@@ -25,9 +25,9 @@ title: BVBD - Project
 
       <!-- The dots/circles -->
       <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <% images.each_with_index do |image, index| %>
+          <span class="dot" onclick="currentSlide(<%= index + 1 %>)"></span>
+        <% end %>
       </div>
     </div>
   </div>

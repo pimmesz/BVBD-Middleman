@@ -1,8 +1,7 @@
 ---
 title: BVBD - Home
 ---
-
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'homepage-banner.jpg' %>);">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(27,154,170,0.6) 0%, rgba(27,154,170,0.6) 50%), url(<%= image_path 'homepage-banner.jpg' %>);">
   <div class="banner-content">
     <h1>BVBD</h1>
     <p>Wij zijn een multidicplinair adviesbureau dat ervaring, strategie en professionaliteit combineerd met een passie voor bouwen en gebouw.</p>
@@ -22,19 +21,19 @@ title: BVBD - Home
 </div>
 </div>
 
-<a id="ontwerp"></a>
+<a id="wat-kan-ik-doen"></a>
 <div class="divide-banner-skills-container" style="background-color: rgba(255,255,255,1)">
-  <% link_to "about.html", class: "divide-banner-skills ontwerp" , style: "background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/img1.jpeg');" do%>
+  <% link_to "about.html", class: "divide-banner-skills ontwerp" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/ontwerp.jpg');" do%>
   <div id="text">
     <h1>Ontwerp</h1>
   </div>
   <% end %>
-  <% link_to "about.html", class: "divide-banner-skills bouw" , style: "background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/img2.jpeg');" do%>
+  <% link_to "about.html", class: "divide-banner-skills bouw" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/bouw.jpg');" do%>
   <div id="text">
     <h1>Bouw</h1>
   </div>
   <% end %>
-  <% link_to "about.html", class: "divide-banner-skills vastgoed" , style: "background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/img3.jpeg');" do%>
+  <% link_to "about.html", class: "divide-banner-skills vastgoed" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/vastgoed.jpg');" do%>
   <div id="text">
     <h1>vastgoed</h1>
   </div>
@@ -44,21 +43,58 @@ title: BVBD - Home
 <h2 class="text-center">Werk</h2>
 <div class="card-container">
   <% data.projects.each do |owner, project| %>
-  <div class="project-card transition">
-    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path project.images.first %>);">
-      <div class="card-category"><%= project.city_name %></div>
-
-      <%= link_to "", "projects/#{owner}.html", class: "card-link" %>
-    </div>
-    <div class="card-description">
-      <p><%= project.name %></p>
-    </div>
-  </div>
+    <% link_to "projects/#{owner}.html", class: "card-link" do %>
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(27,154,170,0.1) 0%, rgba(27,154,170,0.3) 50%), url(<%= image_path project.images.first %>);">
+        <div class="overlay">
+          <div class="card-category"><%= project.city_name %></div>
+          <p><%= project.name %></p>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-<a id="contact"></a>
+<a id="ontwerp"></a>
+<h2 class="text-center">Wat kan ik voor je doen</h2>
+<div class="ontwerp-info">
+  <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'ontwerp.jpg' %>);" class="ontwerp-foto">
+    <h1>Ontwerp</h1>
+  </div>
+  <div class="ontwerp-text">
+    <p>Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.  Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.</p>
+    <ol>
+      <li><b>Haalbaarheid</b>; Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.</li>
+      <li><b>Definitief ontwerp</b>; Tijdens deze fase gaan we inzoomen op uw specifieke wensen en uitstraling. We stemmen materialen, bouwmethode, constructie en (installatie-)techniek op elkaar af.</li>
+      <li><b>Omgevingsvergunning</b>; Uw plan wordt verder uitgewerkt. De tekeningen worden opgesteld, zodat de gemeente het plan kan toetsen op bouwbesluit eisen en overige planologische eisen.</li>
+      <li><b>Uitvoeringsvoorbereiding</b>; Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</li>
+    </ol>
+  </div>
+</div>
 
+<a id="bouw"></a>
+<div class="ontwerp-info">
+  <div class="ontwerp-text">
+    <p>In 2009 zijn wij gestart als bouwkundig ingenieursbureau. Als ingenieursbureau hebben wij grote kennis van bouwtechniek, klimaatbehandeling en bouwmaterialen. Over de jaren hebben wij ons steeds breder ontwikkeld. Al vanaf het begin oprichting zagen we de noodzaak om verantwoordelijkheid te nemen en betrokken te zijn bij het bouwproces. Naast dat wij de ontwerpers waren van het project namen we ook het bouwen ervan ter hand. We konden onze kennis inzetten om tijdens de bouw efficient en kostenbesparend te bouwen.  Dit werd verder uitgebouwd door samenwerkingen met verschillende aannemers in de regio van onze projecten. Hierdoor hebben wij een breed netwerk van specialisten aan ons weten te binden. Van dakdekkers tot specialisten in funderingstechniek  en van interieurbouwers tot installatietechniek. Voor elk bouwproject hebben wij een passend antwoord. U krijgt van ons een duidelijke offerte met een scherpe prijs.
+    </p>
+  </div>
+    <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'bouw.jpg' %>);" class="ontwerp-foto">
+    <h1>Bouw</h1>
+  </div>
+</div>
+
+<a id="vastgoed"></a>
+<div class="ontwerp-info">
+  <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'vastgoed.jpg' %>);" class="ontwerp-foto">
+    <h1>Vastgoed</h1>
+  </div>
+  <div class="ontwerp-text">
+    <p>Nog voor de dotcom-crisis van 2001 zagen wij vastgoed als een veilige belegging. We initieerde in 1999 een vastgoedproject dat we namens onze opdrachtgever heden ten dagen nog steeds exploiteren. Dit geeft ons de ruime ervaring die u mag verwachten van een vastgoedpartner. In de periode van meer dan 15 jaar hebben wij verhuurpanden; bemiddeld, geinitieerd en geexploiteerd. We kijken naar elk object met onze eigen blik. We kijken naar de mogelijkheden van het pand, de locatie en de bijbehorend marktsegment. Wat is de optimale gebouwconfiguratie voor het beoogde wijze van exploitatie.  Basale studentenkamers, compacte studios of juist appartementen in het liberale segment van de verhuurmarkt. Heeft u een pand dat u wil transformeren? Heeft u een pand op het oog als belegging? Laat ons u adviseren over de mogelijkheden en het toekomstig rendement.
+    </p>
+  </div>
+</div>
+
+<a id="contact"></a>
+<h2 class="text-center">Contact</h2>
 <div class="container" id="home-projects">
   <div class="row">
     <div class="col-xs-12 col-sm-offset-4 col-sm-4">
@@ -69,15 +105,7 @@ title: BVBD - Home
       scrolling="no"
       style="width:100%;border:none"
       src="https://pimmesz.wufoo.com/embed/zedhxf70oxctnw/">
-      <a href="https://pimmesz.wufoo.com/forms/zedhxf70oxctnw/">
-        Fill out my Wufoo form!
-      </a>
     </iframe>
-    <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">
-      <span class="notranslate">
-        The easy to use <a href="http://www.wufoo.com/form-builder/">Wufoo form builder</a> helps you make forms easy, fast, and fun.
-      </span>
-    </div>
 
   </div>
 </div>

@@ -25,6 +25,17 @@
   margin-bottom: 30px;
 }
 
+.btn-primary {
+  background-color: rgb(255,196,61);
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  background-color: rgb(255,196,61);
+  opacity: 0.8;
+  border: none;
+}
+
 .divide-banner {
   height: 175px;
   color: white;
@@ -42,7 +53,7 @@ a.divide-banner-skills:hover {
 
 .divide-banner-skills-container {
   display: flex;
-  height: 350px;
+  height: 200px;
   margin: 20px 0px 100px 0px;
 }
 
@@ -56,6 +67,10 @@ a.divide-banner-skills:hover {
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
   transition: all .5s;
+
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
 }
 
 .banner-content {
