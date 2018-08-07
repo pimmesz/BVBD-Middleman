@@ -1,6 +1,6 @@
 <% if current_page.path == "index.html" %>
   <!-- Start with invisible background and light logo on homepage -->
-  <div class="navbar-wagon navbar-invisible">
+  <div class="navbar-wagon navbar-invisible" data-logo-light="<%= image_path 'images/bvbd-logo-light.png' %>" data-logo-dark="<%= image_path 'images/bvbd-logo-dark.png' %>">
 
     <!-- Logo -->
     <a href="/" class="navbar-wagon-brand">
@@ -8,7 +8,7 @@
     </a>
 <% else %>
   <!-- Start with background and dark logo on any other page -->
-  <div class="navbar-wagon navbar-visible">
+  <div class="navbar-wagon navbar-visible" >
     <!-- Logo -->
     <a href="/" class="navbar-wagon-brand">
     <%= image_tag "images/bvbd-logo-dark.png", alt: "logo", id: "navbar-logo" %>

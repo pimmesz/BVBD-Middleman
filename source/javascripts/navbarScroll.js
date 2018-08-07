@@ -9,12 +9,12 @@ if(window.location.pathname == "/" || window.location.pathname == "/BVBD-Middlem
 
   function myFunction() {
     if (document.body.scrollTop > sticky || document.documentElement.scrollTop > sticky) {
-      navbarLogo.src = window.location.href + "images/bvbd-logo-dark.png"
+      navbarLogo.src = navbar.dataset.logoDark
       navbar.classList.remove("navbar-invisible")
       navbar.classList.add("navbar-visible")
     } else {
       // document.querySelector(".navbar-wagon-brand").innerHTML = "<img src='/images/bvbd-logo-light.png' alt='logo'>"
-      navbarLogo.src = window.location.href + "images/bvbd-logo-light.png"
+      navbarLogo.src = navbar.dataset.logoLight
       navbar.classList.remove("navbar-visible")
       navbar.classList.add("navbar-invisible")
     }
