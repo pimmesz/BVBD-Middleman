@@ -9,7 +9,18 @@ title: Van Gorsel - Home
   </div>
 </div>
 
+<a id="over-ons"></a>
+<div class="over-ons-container">
+  <div>
+    <%= image_tag "portrait-placeholder.jpg", :class => "portrait-img"%>
+  </div>
+  <div>
+    <h1>Over ons</h1>
+    <h5>Sinds de oprichting in 2009 heeft het zich ontwikkeld tot een bedrijf dat ontwerpt, bouwt en exploiteert. De kracht van ons bedrijf ligt in het combineren van deze drie facetten in de bouw- en vastgoedwereld. Op deze website ziet u een selectie van de projecten waar wij aan werken of welke we ontworpen en gerealiseerd hebben.</h5>
+  </div>
+</div>
 
+<h2 class="text-center">Onze Kernwaarden</h2>
 <div class="square-container">
   <div class="mainDiv">
     <div class="square"></div>
@@ -18,50 +29,19 @@ title: Van Gorsel - Home
   </div>
 </div>
 
-
-<a id="over-ons"></a>
-<div class="over-ons-container">
-  <div>
-    <%= image_tag "portrait-placeholder.jpg", :class => "portrait-img"%>
-  </div>
-  <div>
-    <h1>Over ons</h1>
-    <h5>Cras dapibus. Vivamus eleme nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, port.</h5>
-  </div>
-</div>
-</div>
-
-<a id="wat-kan-ik-doen"></a>
-<div class="divide-banner-skills-container" style="background-color: rgba(255,255,255,1)">
-  <% link_to "#ontwerp", class: "divide-banner-skills ontwerp" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/ontwerp.jpg');" do%>
-  <div>
-    <h1>Ontwerp</h1>
-  </div>
-  <% end %>
-  <% link_to "#bouw", class: "divide-banner-skills bouw" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/bouw.jpg');" do%>
-  <div>
-    <h1>Bouw</h1>
-  </div>
-  <% end %>
-  <% link_to "#vastgoed", class: "divide-banner-skills vastgoed" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/vastgoed.jpg');" do%>
-  <div>
-    <h1>vastgoed</h1>
-  </div>
-  <% end %>
-</div>
-
-<%= partial "layouts/projects_overview" %>
+1ambitie uistraling ontwerp
+2budget financieel prijs kwaliteit
+3techniek en duurzaamheid
 
 <a id="ontwerp"></a>
 <div class="ontwerp-container">
-  <h2 class="text-center">Ontwerp</h2>
-  <p class="ontwerp-text text-center">Een goed ontwerp is meer dan een plaatje. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling.<br><br>Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.</p>
+  <h2 class="text-center">Stappenplan</h2>
+  <p class="ontwerp-text text-center">Een goed gebouw is meer dan ruimte. Het brengt uw wensen en mogelijkheden samen met bouwtechniek en uitstraling. Het gaat uit van hoe u wilt leven, werken en/of recreeren. Het proces van het ontwerp is op gedeeld in fases.</p>
   <div class="ontwerp-punten">
     <div class="ontwerp-punt">
       <%= image_tag "search.png" %>
       <br>
-      <p><b>1. Haalbaarheid</b><br> Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten.</p>
-      <p>Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.</p>
+      <p><b>1. Haalbaarheid</b><br>Samen kijken we naar de mogelijkheden van uw plannen. Wat zijn de wensen, uitstraling en hoeveel mag dit kosten. Aan het einde van deze fase heeft u een ontwerp met daarbij behorende indicatie van de kosten.</p>
     </div>
     <div class="ontwerp-punt">
       <%= image_tag "edit.png" %>
@@ -81,9 +61,21 @@ title: Van Gorsel - Home
       <p><b>4. Uitvoeringsvoorbereiding</b><br> Om uw plan te kunnen realiseren worden gebouwonderdelen in kaartgebracht en gereedgemaakt voor de aanbesteding aan onderaannemers. Dit kan gaan om muren, daken en vloeren, maar ook om onderdelen zoals een badkamer of maatwerkkeuken.</p>
     </div>
   </div>
+  <div class="ontwerp-punten">
+    <div class="ontwerp-punt">
+      <%= image_tag "notepad.png" %>
+      <br>
+      <p><b>5. Omgevingsvergunning</b><br> we kunnen direct door met de realisatie. Hierin kunnen we heel ver gaan. Zo kunnen wij uw project gebruiksklaar(link 004-6 / 004-7) maken inclusief stoffering en meubelen.</p>
+    </div>
+    <div class="ontwerp-punt">
+      <%= image_tag "flag.png" %>
+      <br>
+      <p><b>6. oplevering en gebruik.</b></p>
+    </div>
   </div>
 </div>
-</div>
+
+<%= partial "layouts/projects_overview" %>
 
 <a id="contact"></a>
 <h2 class="text-center">Contact</h2>
@@ -103,7 +95,7 @@ title: Van Gorsel - Home
 
       <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
 
-      <button type="submit" class="contact-form-button">Verstuur</button>
+      <button type="submit" class="contact-form-button">Verzend vraag</button>
     </form>
   </div>
 
@@ -115,10 +107,6 @@ title: Van Gorsel - Home
       <input type="hidden" name="_next" value="http://localhost:4567/" />
       <input type="text" name="_gotcha" style="display:none" />
 
-      <input class="form-control" type="email" name="_replyto" placeholder="Email" />
-      <input class="form-control" type="text" name="name" placeholder="Naam">
-      <input class="form-control" type="tel" name="tel" placeholder="Telefoonnummer">
-
       <fieldset>
         <p><b>Particulier of bedrijf?</b></p>
         <input type="checkbox" name="particulier_of_bedrijf" value="Particulier">Particulier<br>
@@ -129,23 +117,36 @@ title: Van Gorsel - Home
         <p><b>Ik heb interesse in</b></p>
         <input type="checkbox" name="interesse_in" value="Ontwerp">Ontwerp<br>
         <input type="checkbox" name="interesse_in" value="Bouw">Bouw<br>
-        <input type="checkbox" name="interesse_in" value="Vastgoed">Vastgoed<br>
       </fieldset>
 
       <fieldset>
         <p><b>Werkzaamheden</b></p>
+        <input type="checkbox" name="werkzaamheden" value="renovatie-of-restauratie">Renovatie/restauratie<br>
         <input type="checkbox" name="werkzaamheden" value="Verbouw">Verbouw<br>
         <input type="checkbox" name="werkzaamheden" value="Aan- en opbouw">Aan- en opbouw<br>
-        <input type="checkbox" name="werkzaamheden" value="Nieuwbouw">Nieuwbouw<br>
-        <input type="checkbox" name="werkzaamheden" value="Bouwtechnisch advies">Bouwtechnisch advies<br>
-        <input type="checkbox" name="werkzaamheden" value="Bouwtechnische keuring">Bouwtechnische keuring<br>
-        <input type="checkbox" name="werkzaamheden" value="Splitsing appartementen">Splitsing appartementen<br>
-        <input type="checkbox" name="werkzaamheden" value="Legalisatie bestaande situatie">Legalisatie bestaande situatie<br>
-        <input type="checkbox" name="werkzaamheden" value="Verhuurbemiddeling">Verhuurbemiddeling<br>
-        <input type="checkbox" name="werkzaamheden" value="Vastgoed exploitatie">Vastgoed exploitatie<br>
+        <input type="checkbox" name="werkzaamheden" value="Nieuwbouw woonhuis">Nieuwbouw woonhuis<br>
+        <input type="checkbox" name="werkzaamheden" value="Nieuwbouw bedrijfsruimte">Nieuwbouw bedrijfsruimte<br>
+        <input type="checkbox" name="werkzaamheden" value="Advies">Advies<br>
       </fieldset>
 
-      <button type="submit" class="contact-form-button">Verstuur</button>
+      <fieldset>
+        <p><b>Bijzonderheden</b></p>
+       <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Bericht"></textarea>
+     </fieldset>
+
+     <fieldset>
+      <p><b>Gegevens</b></p>
+      <input type="checkbox" name="werkzaamheden" value="Dhr">Dhr.
+      <input type="checkbox" name="werkzaamheden" value="Mvr.">Mvr.<br>
+      <input class="form-control" type="text" name="name" placeholder="Naam">
+      <input class="form-control" type="text" name="adres" placeholder="Adres">
+      <input class="form-control" type="text" name="postcode" placeholder="Postcode">
+      <input class="form-control" type="text" name="plaatsnaam" placeholder="Plaatsnaam">
+      <input class="form-control" type="email" name="_replyto" placeholder="Email" />
+      <input class="form-control" type="tel" name="tel" placeholder="Telefoonnummer">
+     </fieldset>
+
+      <button type="submit" class="contact-form-button">Verzend offerte aanvraag</button>
     </form>
   </div>
 </div>

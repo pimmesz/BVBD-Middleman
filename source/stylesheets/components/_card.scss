@@ -8,8 +8,8 @@
 }
 
 .card {
-  height: 250px;
-  width: 250px;
+  height: 50vh;
+  width: 40vw;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -36,6 +36,7 @@
     transition: all 0.2s;
     color: $white;
     font-size: 20px;
+    text-align: center;
   }
 }
 
