@@ -36,7 +36,7 @@ label {
 
 .ontwerp-container {
   margin: 20px 0px 0px 0px;
-  padding: 50px 0px 50px 0px;
+  padding: 70px 30px 70px 30px;
 
   background-color: $light-sea-green;
   -webkit-clip-path: polygon(0 0,100% 10%,100% 100%,0 90%);
@@ -59,10 +59,7 @@ label {
 }
 
 .ontwerp-punt {
-  width: 25%;
-  padding: 10px;
-
-  width: 25%;
+  width: 50%;
   padding: 10px;
   display: flex;
   flex-direction: column;

@@ -13,7 +13,7 @@ if(window.location.pathname == "/" || window.location.pathname == "/BVBD-Middlem
       navbar.classList.remove("navbar-invisible")
       navbar.classList.add("navbar-visible")
     } else {
-      // document.querySelector(".navbar-wagon-brand").innerHTML = "<img src='/images/bvbd-logo-light.png' alt='logo'>"
+      // document.querySelector(".navbar-wagon-brand").innerHTML = "<img src='/images/Van Gorsel -logo-light.png' alt='logo'>"
       navbarLogo.src = navbar.dataset.logoLight
       navbar.classList.remove("navbar-visible")
       navbar.classList.add("navbar-invisible")
