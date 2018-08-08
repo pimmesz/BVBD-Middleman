@@ -1,21 +1,3 @@
-#home {
-  background-color: #D23333;
-  color: white;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  p {
-    margin-top: 1.5em;
-  }
-  a {
-    color: rgba(0,0,0,0.4);
-    font-weight: bold;
-    font-size: 16px;
-  }
-}
-
 .description-img {
   width: 100%;
   height: 350px;
@@ -55,12 +37,18 @@ label {
 .ontwerp-container {
   margin: 20px 0px 0px 0px;
   padding: 50px 0px 50px 0px;
-  background-color: #1b9aaa;
-  color: white;
+
+  background-color: $light-sea-green;
+  -webkit-clip-path: polygon(0 0,100% 10%,100% 100%,0 90%);
+    clip-path: polygon(0 0,100% 10%,100% 100%,0 90%);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2, p {
+    color: white;
+  }
 }
 
 .ontwerp-punten {
@@ -112,7 +100,3 @@ label {
   padding: 0px 30px 50px 30px;
   width: 50vw;
 }
-
-.dark-blue {
-   color: $dark-blue;
- }

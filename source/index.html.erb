@@ -10,7 +10,7 @@ title: BVBD - Home
 </div>
 
 <a id="over-ons"></a>
-<div class="over-ons-container dark-blue">
+<div class="over-ons-container">
   <div>
     <%= image_tag "portrait-placeholder.jpg", :class => "portrait-img"%>
   </div>
@@ -23,18 +23,18 @@ title: BVBD - Home
 
 <a id="wat-kan-ik-doen"></a>
 <div class="divide-banner-skills-container" style="background-color: rgba(255,255,255,1)">
-  <% link_to "about.html", class: "divide-banner-skills ontwerp" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/ontwerp.jpg');" do%>
-  <div id="text">
+  <% link_to "#ontwerp", class: "divide-banner-skills ontwerp" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/ontwerp.jpg');" do%>
+  <div>
     <h1>Ontwerp</h1>
   </div>
   <% end %>
-  <% link_to "about.html", class: "divide-banner-skills bouw" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/bouw.jpg');" do%>
-  <div id="text">
+  <% link_to "#bouw", class: "divide-banner-skills bouw" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/bouw.jpg');" do%>
+  <div>
     <h1>Bouw</h1>
   </div>
   <% end %>
-  <% link_to "about.html", class: "divide-banner-skills vastgoed" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/vastgoed.jpg');" do%>
-  <div id="text">
+  <% link_to "#vastgoed", class: "divide-banner-skills vastgoed" , style: "background-image: linear-gradient(-225deg, rgba(27,154,170,0.4) 0%, rgba(27,154,170,0.6) 50%), url('images/vastgoed.jpg');" do%>
+  <div>
     <h1>vastgoed</h1>
   </div>
   <% end %>
@@ -43,9 +43,9 @@ title: BVBD - Home
 <h2 class="text-center">Werk</h2>
 <div class="card-container">
   <% data.projects.each do |owner, project| %>
-  <% link_to "projects/#{owner}.html", class: "card-link" do %>
+  <% link_to "projects/#{owner}.html" do %>
   <div class="card" style="background-image: linear-gradient(-225deg, rgba(27,154,170,0.1) 0%, rgba(27,154,170,0.3) 50%), url(<%= image_path project.images.first %>);">
-    <div class="overlay">
+    <div class="card-overlay">
       <div class="card-category"><%= project.city_name %></div>
       <p><%= project.name %></p>
     </div>
@@ -86,7 +86,7 @@ title: BVBD - Home
 
 <a id="bouw"></a>
 <div class="ontwerp-info">
-  <div class="ontwerp-text dark-blue">
+  <div class="ontwerp-text">
     <h2>Bouw</h2>
     <p>In 2009 zijn wij gestart als bouwkundig ingenieursbureau. Als ingenieursbureau hebben wij grote kennis van bouwtechniek, klimaatbehandeling en bouwmaterialen. Over de jaren hebben wij ons steeds breder ontwikkeld. Al vanaf het begin oprichting zagen we de noodzaak om verantwoordelijkheid te nemen en betrokken te zijn bij het bouwproces. Naast dat wij de ontwerpers waren van het project namen we ook het bouwen ervan ter hand. We konden onze kennis inzetten om tijdens de bouw efficient en kostenbesparend te bouwen.  Dit werd verder uitgebouwd door samenwerkingen met verschillende aannemers in de regio van onze projecten. Hierdoor hebben wij een breed netwerk van specialisten aan ons weten te binden. Van dakdekkers tot specialisten in funderingstechniek  en van interieurbouwers tot installatietechniek. Voor elk bouwproject hebben wij een passend antwoord. U krijgt van ons een duidelijke offerte met een scherpe prijs.
     </p>
@@ -97,11 +97,11 @@ title: BVBD - Home
 </div>
 
 <a id="vastgoed"></a>
-<div class="ontwerp-info dark-blue">
+<div class="ontwerp-info">
   <div style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'vastgoed.jpg' %>);" class="ontwerp-foto">
     <h1>Vastgoed</h1>
   </div>
-  <div class="ontwerp-text dark-blue">
+  <div class="ontwerp-text">
     <h2>Vastgoed</h2>
     <p>Nog voor de dotcom-crisis van 2001 zagen wij vastgoed als een veilige belegging. We initieerde in 1999 een vastgoedproject dat we namens onze opdrachtgever heden ten dagen nog steeds exploiteren. Dit geeft ons de ruime ervaring die u mag verwachten van een vastgoedpartner. In de periode van meer dan 15 jaar hebben wij verhuurpanden; bemiddeld, geinitieerd en geexploiteerd. We kijken naar elk object met onze eigen blik. We kijken naar de mogelijkheden van het pand, de locatie en de bijbehorend marktsegment. Wat is de optimale gebouwconfiguratie voor het beoogde wijze van exploitatie.  Basale studentenkamers, compacte studios of juist appartementen in het liberale segment van de verhuurmarkt. Heeft u een pand dat u wil transformeren? Heeft u een pand op het oog als belegging? Laat ons u adviseren over de mogelijkheden en het toekomstig rendement.
     </p>
@@ -109,9 +109,9 @@ title: BVBD - Home
 </div>
 
 <a id="contact"></a>
-<h2 class="text-center dark-blue">Contact</h2>
+<h2 class="text-center">Contact</h2>
 
-<div class="contact-form-container dark-blue">
+<div class="contact-form-container">
   <div class="contact-form-div">
     <h3>Stel een vraag</h3>
     <form method="POST" action="https://formspree.io/hello@pim.gg" class="contact-form">

@@ -34,16 +34,11 @@
     -moz-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+    color: $white;
   }
 }
 
-#text {
-  -moz-transition: all 0.6s;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-.overlay {
+.card-overlay {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -52,7 +47,7 @@
   padding: 10px;
 }
 
-.card:hover .overlay {
+.card:hover .card-overlay {
   background-color: rgba(27,154,170,0.6);
   cursor: pointer;
   p {
