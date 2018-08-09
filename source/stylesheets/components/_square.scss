@@ -11,6 +11,12 @@
   margin:0px 0px 50px 0px;
   transform: rotate(180deg);
 }
+
+.square-text {
+  margin-left: 40px;
+  width: 250px;
+}
+
 .square {
   width:100px;
   height:100px;
@@ -21,6 +27,7 @@
   position: absolute;
   top: 43px;
 }
+
 .square2 {
   width:100px;
   height:100px;
@@ -32,6 +39,7 @@
   left:102px;
   top: 43px;
 }
+
 .square3 {
   width:114px;
   height:100px;
@@ -44,7 +52,7 @@
   top: -32px;
 }
 
-.square, .square2, .square3 {
+.square, .square2, .square3, .square-text {
  -moz-transition: all 1s;
  -webkit-transition: all 1s;
  transition: all 1s;
