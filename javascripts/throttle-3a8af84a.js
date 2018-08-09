@@ -1,0 +1,1 @@
+function throttle(t,e,n){e||(e=250);var a,i;return function(){var o=n||this,r=+new Date,u=arguments;a&&r<a+e?(clearTimeout(i),i=setTimeout(function(){a=r,t.apply(o,u)},e)):(a=r,t.apply(o,u))}}
