@@ -9,20 +9,31 @@
 .kernwaarde {
   padding: 10px 20px 20px 20px;
 
-  -moz-transition: all .7s;
-  -webkit-transition: all .7s;
-  transition: all .7s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   &:hover {
     cursor: pointer;
   }
 }
 
-.active {
-  background-color: $light-sea-green;
+.kernwaarde.active{
   border-radius: 5px;
   h1, p {
     color: $white;
   }
+}
+
+.kernwaarde.ambitie.active {
+  background-color: $logo-light-blue;
+}
+
+.kernwaarde.budget.active {
+  background-color: $logo-blue;
+}
+
+.kernwaarde.techniek.active {
+  background-color: $logo-green;
 }
 
 .description-img {
@@ -65,7 +76,7 @@ label {
   margin: 100px 0px 0px 0px;
   padding: 70px 30px 70px 30px;
 
-  background-color: $light-sea-green;
+  background-color: $spanish-blue;
   -webkit-clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
   clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
 

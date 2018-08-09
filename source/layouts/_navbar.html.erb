@@ -1,21 +1,36 @@
 <% if current_page.path == "index.html" %>
   <% navbar_wagon_item_color = 'white'  %>
   <!-- Start with invisible background and light logo on homepage -->
-  <div class="navbar-wagon navbar-invisible" data-logo-light="<%= image_path 'images/van-gorsel-logo-light.png' %>" data-logo-dark="<%= image_path 'images/van-gorsel-logo-dark.png' %>">
+  <div class="navbar-wagon navbar-invisible">
 
-    <!-- Logo -->
-    <% link_to "index.html", class: "navbar-wagon-brand" do %>
-      <%= image_tag "images/van-gorsel-logo-light.png", alt: "logo", id: "navbar-logo" %>
+      <!-- Logo -->
+    <% link_to "../index.html", class: "navbar-wagon-brand" do %>
+      <div class="navbar-logo-container">
+        <%= image_tag "images/VanGorsel-Logo.png", alt: "logo", id: "navbar-logo" %>
+        <div class="navbar-logo-text">
+          <H5 style="color: #ffffff">VAN GORSEL</H5>
+          <p style="color: #ffffff"><i>ontwerpˑrealisatie</i></p>
+        </div>
+      </div>
     <% end %>
+
 <% else %>
   <% navbar_wagon_item_color = 'black' %>
   <!-- Start with background and dark logo on any other page -->
   <div class="navbar-wagon navbar-visible" >
-    <!-- Logo -->
+
+  <!-- Logo -->
     <% link_to "../index.html", class: "navbar-wagon-brand" do %>
-      <%= image_tag "images/van-gorsel-logo-dark.png", alt: "logo", id: "navbar-logo" %>
+      <div class="navbar-logo-container">
+        <%= image_tag "images/VanGorsel-Logo.png", alt: "logo", id: "navbar-logo" %>
+        <div class="navbar-logo-text">
+          <H5>VAN GORSEL</H5>
+          <p><i>ontwerpˑrealisatie</i></p>
+        </div>
+      </div>
     <% end %>
-  <% end %>
+
+<% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">

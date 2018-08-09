@@ -1,5 +1,4 @@
 var squareText = document.querySelector(".square-text")
-
 var ambitie = document.querySelector(".kernwaarde.ambitie")
 var logoAmbitie = document.querySelector(".square2")
 
@@ -62,4 +61,4 @@ function moveTechniekIn(){
   logoTechniek.style.top = "-32px"
   techniek.classList.remove("active")
   squareText.innerHTML = "<h1>VAN GORSEL</h1>"
-};
+}
