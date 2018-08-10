@@ -15,9 +15,12 @@
 .square-text {
   margin-left: 40px;
   width: 300px;
+  p {
+    opacity: 0.6;
+  }
 }
 
-.square {
+.square1 {
   width:100px;
   height:100px;
   background:rgba(24,62,255,1);
@@ -28,7 +31,7 @@
   top: 43px;
 }
 
-.square2 {
+.square0 {
   width:100px;
   height:100px;
   background:rgba(0,222,220,1);
@@ -40,7 +43,7 @@
   top: 43px;
 }
 
-.square3 {
+.square2 {
   width:114px;
   height:100px;
   background:rgba(165,221,2,1);
@@ -52,7 +55,7 @@
   top: -32px;
 }
 
-.square, .square2, .square3, .square-text {
+.square1, .square0, .square2, .square-text {
  -moz-transition: all 1s;
  -webkit-transition: all 1s;
  transition: all 1s;
