@@ -7,13 +7,27 @@
 }
 
 .kernwaarde {
-  padding: 10px 20px 20px 20px;
+  text-align: center;
 
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
   transition: all .5s;
   &:hover {
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kernwaarde.__mobile{
+    padding: 0px;
+    width: 33vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .kernwaarde.__desktop{
+    padding: 10px 20px 20px 20px;
+    width: 25vw;
   }
 }
 
@@ -70,11 +84,10 @@ label {
   margin: 10px;
 }
 
-// Ontwerp, bouw, vastgoed extra info on homepage
+// Stappenplan
 
-.ontwerp-container {
+.stappenplan-container {
   margin: 100px 0px 0px 0px;
-  padding: 70px 30px 70px 30px;
 
   background-color: $spanish-blue;
   -webkit-clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
@@ -89,15 +102,47 @@ label {
   }
 }
 
-.ontwerp-punten {
+@media screen and (max-width: 600px) {
+  .stappenplan-container.__mobile{
+    padding: 70px 0px 70px 0px;
+  }
+  .stappenplan-text.__mobile {
+    padding: 0px 30px 50px 30px;
+    width: 90vw;
+  }
+  .stappenplan-punten.__mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+  .stappenplan-punt.__mobile{
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .stappenplan-container.__desktop{
+    padding: 70px 30px 70px 30px;
+  }
+  .stappenplan-text.__desktop {
+    padding: 0px 30px 50px 30px;
+    width: 50vw;
+  }
+  .stappenplan-punten.__desktop{
+    flex-direction: row;
+  }
+  .stappenplan-punt.__desktop{
+    width: 50vw;
+  }
+}
+
+.stappenplan-punten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0px 10px 0px;
 }
 
-.ontwerp-punt {
-  width: 50%;
+.stappenplan-punt {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -106,15 +151,15 @@ label {
   text-align: center;
 }
 
-.ontwerp-punt img {
+.stappenplan-punt img {
   height: 50px;
 }
 
-.ontwerp-info {
+.stappenplan-info {
   display: flex;
 }
 
-.ontwerp-foto {
+.stappenplan-foto {
   height: 75vh;
   width: 50%;
 
@@ -129,9 +174,4 @@ label {
   h1 {
     color: white;
   }
-}
-
-.ontwerp-text {
-  padding: 0px 30px 50px 30px;
-  width: 50vw;
 }

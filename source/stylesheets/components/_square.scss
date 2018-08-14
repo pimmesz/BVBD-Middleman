@@ -4,6 +4,26 @@
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .square-container.__mobile{
+    flex-direction: column;
+  }
+
+  .square-text.__mobile {
+    margin: 20px 0px 0px 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .square-container.__desktop{
+    flex-direction: row;
+  }
+
+  .square-text.__desktop {
+    margin-left: 40px;
+  }
+}
+
 .mainDiv{
   position: relative;
   width: 206px;
@@ -13,7 +33,6 @@
 }
 
 .square-text {
-  margin-left: 40px;
   width: 300px;
   p {
     opacity: 0.6;

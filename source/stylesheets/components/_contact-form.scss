@@ -1,26 +1,38 @@
 .contact-form-container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form-container.__mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact-form-container.__desktop {
+    flex-direction: row;
+  }
 }
 
 .contact-form-div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
 
-    color: $rich-black;
+  color: $rich-black;
 }
 
 form.contact-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 form.contact-form input {
@@ -28,19 +40,19 @@ form.contact-form input {
 }
 
 form input[type="checkbox"] {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 button.contact-form-button {
-    background-color: #EDAE49;
-    color: white;
-    height: 40px;
+  background-color: #EDAE49;
+  color: white;
+  height: 40px;
 }
 
 button.contact-form-button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 textarea#exampleTextarea {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

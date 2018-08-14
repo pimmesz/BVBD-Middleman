@@ -2,32 +2,30 @@
 title: Van Gorsel - Project
 ---
 
-<div class="container" id="home-projects">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <h3><b><%= name %></b></h3>
-      <p><%= description %></p>
-    </div>
+<div class="projects-container __mobile __desktop">
+  <div>
+    <h3><b><%= name %></b></h3>
+    <p><%= description %></p>
+  </div>
 
-    <div class="col-xs-12 col-sm-6">
-      <div class="slideshow-container">
+  <div>
+    <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
-        <% images.each_with_index do |image, index| %>
-        <div class="mySlides fade">
-          <div class="numbertext"><%= index + 1%> / <%= images.length %></div>
-          <%= image_tag image, :class => "slider-img"%>
-        </div>
+      <!-- Full-width images with number and caption text -->
+      <% images.each_with_index do |image, index| %>
+      <div class="mySlides fade">
+        <div class="numbertext"><%= index + 1%> / <%= images.length %></div>
+        <%= image_tag image, :class => "slider-img"%>
+      </div>
       <% end %>
-      </div>
-      <br>
+    </div>
+    <br>
 
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <% images.each_with_index do |image, index| %>
-          <span class="dot" onclick="currentSlide(<%= index + 1 %>)"></span>
-        <% end %>
-      </div>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <% images.each_with_index do |image, index| %>
+      <span class="dot" onclick="currentSlide(<%= index + 1 %>)"></span>
+      <% end %>
     </div>
   </div>
 </div>
