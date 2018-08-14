@@ -3,15 +3,30 @@
   padding: 0px 30px 0px 30px;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .projects-container.__mobile{
     display: flex;
     flex-direction: column-reverse;
+  }
+  .show-text {
+    width: 100%;
+  }
+  .slideshow {
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 600px) {
   .projects-container.__desktop{
     display: flex;
+  }
+  .show-text {
+    width: 60vw;
+    margin: 0px 50px 0px 0px;
+  }
+  .slideshow {
+    width: 40vw;
   }
 }
