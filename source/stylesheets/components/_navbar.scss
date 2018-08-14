@@ -1,5 +1,5 @@
 /* Main navbar */
-.navbar-wagon {
+.navbar-van-gorsel {
   transition: all 0.3s ease;
   height: 70px;
   width: 100vw;
@@ -15,11 +15,11 @@
 
 .navbar-invisible {
   /* Navbar link */
-  .navbar-wagon-link {
+  .navbar-van-gorsel-link {
     color: #ffffff;
     font-size: 14px;
   }
-  .navbar-wagon-link:hover {
+  .navbar-van-gorsel-link:hover {
     color: rgba(244, 96, 54, 1);
     text-decoration: none;
   }
@@ -30,12 +30,12 @@
   background: white;
 
   /* Navbar link */
-  .navbar-wagon-link {
+  .navbar-van-gorsel-link {
     color: #616668;
     font-size: 14px;
   }
 
-  .navbar-wagon-link:hover {
+  .navbar-van-gorsel-link:hover {
     color: rgba(244, 96, 54, 1);
     text-decoration: none;
   }
@@ -59,31 +59,31 @@
 }
 
 
-.navbar-wagon-brand img {
+.navbar-van-gorsel-brand img {
   height: 50px;
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-van-gorsel-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Basic navbar item */
-.navbar-wagon-item {
+.navbar-van-gorsel-item {
   cursor: pointer;
   padding: 0 20px;
   color: white;
 }
 
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.navbar-van-gorsel-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+.navbar-van-gorsel-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
@@ -91,11 +91,11 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.navbar-van-gorsel-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.navbar-van-gorsel-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;

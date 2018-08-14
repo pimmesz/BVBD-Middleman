@@ -1,10 +1,10 @@
 <% if current_page.path == "index.html" %>
-  <% navbar_wagon_item_color = 'white'  %>
+  <% navbar_van_gorsel_item_color = 'white'  %>
   <!-- Start with invisible background and light logo on homepage -->
-  <div class="navbar-wagon navbar-invisible">
+  <div class="navbar-van-gorsel navbar-invisible">
 
       <!-- Logo -->
-    <% link_to "../index.html", class: "navbar-wagon-brand" do %>
+    <% link_to "../index.html", class: "navbar-van-gorsel-brand" do %>
       <div class="navbar-logo-container">
         <%= image_tag "images/VanGorsel-Logo.png", alt: "logo", id: "navbar-logo" %>
         <div class="navbar-logo-text">
@@ -15,12 +15,12 @@
     <% end %>
 
 <% else %>
-  <% navbar_wagon_item_color = 'black' %>
+  <% navbar_van_gorsel_item_color = 'black' %>
   <!-- Start with background and dark logo on any other page -->
-  <div class="navbar-wagon navbar-visible" >
+  <div class="navbar-van-gorsel navbar-visible" >
 
   <!-- Logo -->
-    <% link_to "../index.html", class: "navbar-wagon-brand" do %>
+    <% link_to "../index.html", class: "navbar-van-gorsel-brand" do %>
       <div class="navbar-logo-container">
         <%= image_tag "images/VanGorsel-Logo.png", alt: "logo", id: "navbar-logo" %>
         <div class="navbar-logo-text">
@@ -33,22 +33,23 @@
 <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-van-gorsel-right hidden-xs hidden-sm">
 
-    <a href="#ontwerp" class="navbar-wagon-item navbar-wagon-link">Ontwerp</a>
-    <a href="#bouw" class="navbar-wagon-item navbar-wagon-link">Bouw</a>
-    <a href="#vastgoed" class="navbar-wagon-item navbar-wagon-link">Vastgoed</a>
-    <a href="#contact" class="navbar-wagon-item navbar-wagon-link">Contact</a>
+    <a href="#over-ons" class="navbar-van-gorsel-item navbar-van-gorsel-link">Over Ons</a>
+    <a href="#stappenplan" class="navbar-van-gorsel-item navbar-van-gorsel-link">Stappenplan</a>
+    <a href="#projecten" class="navbar-van-gorsel-item navbar-van-gorsel-link">Projecten</a>
+    <a href="#contact" class="navbar-van-gorsel-item navbar-van-gorsel-link">Contact</a>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg" style="color: <%= navbar_wagon_item_color %>">
+  <div class="navbar-van-gorsel-item hidden-md hidden-lg" style="color: <%= navbar_van_gorsel_item_color %>">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+      <ul class="dropdown-menu dropdown-menu-right navbar-van-gorsel-dropdown-menu">
+        <li><a href="#over-ons" class="navbar-van-gorsel-item navbar-van-gorsel-link">Over Ons</a></li>
+        <li><a href="#stappenplan" class="navbar-van-gorsel-item navbar-van-gorsel-link">Stappenplan</a></li>
+        <li><a href="#projecten" class="navbar-van-gorsel-item navbar-van-gorsel-link">Projecten</a></li>
+        <li><a href="#contact" class="navbar-van-gorsel-item navbar-van-gorsel-link">Contact</a></li>
       </ul>
     </div>
   </div>

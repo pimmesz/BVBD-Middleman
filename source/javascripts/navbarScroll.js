@@ -2,11 +2,11 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
   window.onscroll = function() {myFunction()};
 
   var banner = document.querySelector(".banner")
-  var navbar = document.querySelector(".navbar-wagon")
+  var navbar = document.querySelector(".navbar-van-gorsel")
   var navbarLogo = document.querySelector("#navbar-logo")
   var navbarTextH5 = document.querySelector(".navbar-logo-text").children[0]
   var navbarTextP = document.querySelector(".navbar-logo-text").children[1]
-  var hamburgerMenu = document.querySelector(".navbar-wagon-item.hidden-md.hidden-lg")
+  var hamburgerMenu = document.querySelector(".navbar-van-gorsel-item.hidden-md.hidden-lg")
 
   var sticky = banner.offsetHeight - 50;
 
