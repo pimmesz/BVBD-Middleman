@@ -14,6 +14,7 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
     } else{
       bannerNextNumber = parseInt(bannerActiveNumber) + 1;
       bannerPrepareNumber = parseInt(bannerActiveNumber) + 2;
+    }
 
     var bannerNext = findBackground(parseInt(bannerNextNumber));
     var bannerPrepare = findBackground(parseInt(bannerPrepareNumber));
