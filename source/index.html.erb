@@ -1,11 +1,18 @@
 ---
 title: Van Gorsel - Home
 ---
-<div class="banner __desktop __mobile" style="background-image: linear-gradient(-225deg, rgba(1,111,185,0.8) 0%, rgba(1,111,185,0.8) 50%), url(<%= image_path 'achtergrond-rudolfvangorsel.jpg' %>);">
-  <div class="banner-content">
+
+<div class="banner __desktop __mobile" id="banner-test">
+  <div class="overlay"></div>
+  <%= image_tag "achtergrond-rudolfvangorsel.jpg", :class => "banner-test", :id => "active", :data => { :number => 1 } %>
+  <%= image_tag "09-DBA/01.jpg", :class => "banner-test", :id => "next", :data => { :number => 2 } %>
+  <%= image_tag "09-DBA/02.jpg", :class => "banner-test", :id => "inactive", :data => { :number => 3 } %>
+  <%= image_tag "09-DBA/03.jpg", :class => "banner-test", :id => "inactive", :data => { :number => 4 } %>
+  <%= image_tag "09-DBA/03.jpg", :class => "banner-test", :id => "inactive", :data => { :number => 5 } %>
+  <div class="banner-content banner-test-text">
     <h1>Van Gorsel ontwerp realisatie</h1>
     <p>Wij zijn een multidicplinair adviesbureau dat ervaring, strategie en professionaliteit combineerd met een passie voor bouwen en gebouw.</p>
-    <%= link_to "Wat kan ik voor je doen?", "#stappenplan", class: "btn btn-primary" %>
+    <%= link_to "werkwijze", "#stappenplan", class: "__button" %>
   </div>
 </div>
 
