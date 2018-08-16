@@ -2,9 +2,9 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
   setInterval(change, 6000);
 
   function change(){
-    let homeActive = document.querySelector("#active");
-    let bannerActiveNumber = homeActive.dataset.number;
-    let bannerActive = findBackground(bannerActiveNumber);
+    var homeActive = document.querySelector("#active");
+    var bannerActiveNumber = homeActive.dataset.number;
+    var bannerActive = findBackground(bannerActiveNumber);
     if(bannerActiveNumber === "3") {
       bannerNextNumber = 4;
       bannerPrepareNumber = 1;
@@ -15,8 +15,8 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
       bannerNextNumber = parseInt(bannerActiveNumber) + 1;
       bannerPrepareNumber = parseInt(bannerActiveNumber) + 2;
     }
-    let bannerNext = findBackground(`${parseInt(bannerNextNumber)}`);
-    let bannerPrepare = findBackground(`${parseInt(bannerPrepareNumber)}`);
+    var bannerNext = findBackground(`${parseInt(bannerNextNumber)}`);
+    var bannerPrepare = findBackground(`${parseInt(bannerPrepareNumber)}`);
     bannerActive.id = "inactive";
     bannerNext.id = "active";
     bannerPrepare.id = "next";
