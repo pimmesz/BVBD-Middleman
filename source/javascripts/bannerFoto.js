@@ -1,4 +1,4 @@
-setInterval(change, 5000);
+setInterval(change, 6000);
 
 function change(){
   let homeActive = document.querySelector("#active");

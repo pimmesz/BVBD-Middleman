@@ -28,10 +28,10 @@
 
     cursor: pointer;
     background-image: none;
-    color: #EDAE49;
-    border: 4px solid #EDAE49;
+    color: #ffffff;
+    background: #EDAE49;
     font-weight: 550;
-    padding: 6px 12px;
+    padding: 10px;
     border-radius: 2px;
     height: 50px;
     width: 150px
@@ -50,58 +50,6 @@
   }
 }
 
-.btn-primary {
-  background-color: $bright-orange;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: $bright-orange;
-  opacity: 0.8;
-  border: none;
-}
-
-.divide-banner {
-  height: 175px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-}
-
-a.divide-banner-skills:hover {
-  color: white;
-  text-decoration: none;
-  opacity: 0.7;
-}
-
-.divide-banner-skills-container {
-  display: flex;
-  height: 200px;
-  margin: 20px 0px 100px 0px;
-}
-
-.divide-banner-skills {
-  color: white;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  h1 {
-    color: $white;
-  }
-}
-
 .banner-content {
   margin: 0px 50px 0px 50px;
   width: 60vw;
@@ -109,7 +57,8 @@ a.divide-banner-skills:hover {
 }
 
 .overlay {
-  background: rgba(39, 62, 84, 0.6);
+  background: $logo-light-blue;
+  opacity: 0.8;
   height: 100vh;
   width: 100vw;
   z-index: 5;
