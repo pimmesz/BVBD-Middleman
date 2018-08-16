@@ -1,3 +1,23 @@
+.contactgegevens-div.__mobile.__desktop {
+  display: flex;
+  justify-content: space-evenly;
+  background: #016FB9;
+  -webkit-clip-path: polygon(0 0,100% 10%,100% 100%,0 90%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  h3 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+
+.contact-form__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-form-container {
   display: flex;
   justify-content: space-evenly;
@@ -7,11 +27,36 @@
   .contact-form-container.__mobile {
     flex-direction: column-reverse;
   }
+  .contactgegevens-div.__mobile{
+    flex-direction: column;
+    padding: 50px 0px 70px 0px;
+  }
+  .contact-form__box{
+    margin: 0px 0px 10px 0px;
+  }
+  .maps-container {
+    flex-direction: column;
+  }
+  .maps{
+    width: 97vw;
+  }
 }
 
 @media screen and (min-width: 600px) {
   .contact-form-container.__desktop {
     flex-direction: row;
+  }
+  .contactgegevens-div.__mobile{
+    flex-direction: row;
+  }
+  .contact-form__box{
+    margin: 50px 0px 50px 0px;
+  }
+  .maps-container {
+    flex-direction: row;
+  }
+  .maps{
+    width: 50vw;
   }
 }
 
@@ -55,4 +100,15 @@ button.contact-form-button:hover {
 
 textarea#exampleTextarea {
   margin-bottom: 10px;
+}
+
+.maps-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.maps{
+  height: 70vh;
+  margin: 10px;
+  text-align: center;
 }

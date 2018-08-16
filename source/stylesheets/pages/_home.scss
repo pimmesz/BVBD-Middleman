@@ -8,7 +8,9 @@
 
 .kernwaarde {
   text-align: center;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   -moz-transition: all .5s;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -26,8 +28,10 @@
 
 @media screen and (min-width: 600px) {
   .kernwaarde.__desktop{
-    padding: 10px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
     width: 25vw;
+    height: 100px;
+
   }
 }
 
@@ -109,6 +113,7 @@ label {
   .stappenplan-text.__mobile {
     padding: 0px 30px 50px 30px;
     width: 90vw;
+    text-align: center;
   }
   .stappenplan-punten.__mobile{
     flex-direction: column;
@@ -126,6 +131,7 @@ label {
   .stappenplan-text.__desktop {
     padding: 0px 30px 50px 30px;
     width: 50vw;
+    text-align: center;
   }
   .stappenplan-punten.__desktop{
     flex-direction: row;

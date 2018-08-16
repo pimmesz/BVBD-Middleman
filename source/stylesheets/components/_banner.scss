@@ -1,6 +1,7 @@
-.banner {
+  .banner {
   color: white;
   text-align: center;
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -11,13 +12,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
     color: $white;
   }
   p {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
     color: $white;
     opacity: 0.8;
@@ -39,37 +40,41 @@
 }
 
 @media screen and (max-width: 600px) {
-  .banner.__mobile {
-    height: 140vh;
+  .banner-content{
+    margin: 0px;
+    width: 70vw;
+  }
+  .banner-test-text{
+    top: 50px;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .banner.__desktop{
-    height: 100vh;
+  .banner-content{
+    margin: 0px 50px 0px 50px;
+    width: 50vw;
   }
 }
 
 .banner-content {
-  margin: 0px 50px 0px 50px;
-  width: 60vw;
   position: relative;
 }
 
 .overlay {
   background: $logo-light-blue;
   opacity: 0.8;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   z-index: 5;
   position: absolute;
 }
 
 .banner-test{
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   position: absolute;
+  top: 0;
 }
 
 .banner-test#active{
@@ -96,5 +101,5 @@
 
 .banner-test-text {
   position: absolute;
-  z-index: 20;
+  z-index: 5;
 }
