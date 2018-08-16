@@ -14,9 +14,9 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
     } else{
       bannerNextNumber = parseInt(bannerActiveNumber) + 1;
       bannerPrepareNumber = parseInt(bannerActiveNumber) + 2;
-    }
-    var bannerNext = findBackground(`${parseInt(bannerNextNumber)}`);
-    var bannerPrepare = findBackground(`${parseInt(bannerPrepareNumber)}`);
+
+    var bannerNext = findBackground(parseInt(bannerNextNumber));
+    var bannerPrepare = findBackground(parseInt(bannerPrepareNumber));
     bannerActive.id = "inactive";
     bannerNext.id = "active";
     bannerPrepare.id = "next";
@@ -24,6 +24,7 @@ if(window.location.pathname == "/" || window.location.pathname == "/Van-Gorsel-M
   }
 
   function findBackground(number){
-    return document.querySelector(`[data-number='${number}']`);
+    number = "'" + number + "'";
+    return document.querySelector("[data-number=" + number + "]");
   }
 }
