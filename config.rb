@@ -2,7 +2,12 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :sprockets
+# activate :sprockets
+
+require 'sprockets/es6'
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
 
 page '/*.xml', layout: false
 page '/*.json', layout: false
@@ -53,9 +58,4 @@ activate :imageoptim do |options|
   options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
   options.pngout    = { :copy_chunks => false, :strategy => 0 }
   options.svgo      = {}
-end
-
-require 'sprockets/es6'
-activate :sprockets do |s|
-  s.supported_output_extensions << '.es6'
 end
