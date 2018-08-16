@@ -1,0 +1,23 @@
+{
+  "name": "van-gorsel-middleman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pimmesz/Van-Gorsel-Middleman.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pimmesz/Van-Gorsel-Middleman/issues"
+  },
+  "homepage": "https://github.com/pimmesz/Van-Gorsel-Middleman#readme",
+  "devDependencies": {
+    "babel-brunch": "^6.1.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

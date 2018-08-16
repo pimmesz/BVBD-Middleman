@@ -54,3 +54,22 @@ activate :imageoptim do |options|
   options.pngout    = { :copy_chunks => false, :strategy => 0 }
   options.svgo      = {}
 end
+
+
+
+
+activate :external_pipeline,
+  name: :brunch,
+  command: "brunch #{build? ? 'build --production' : 'watch'}",
+  source: ".tmp/dist",
+  latency: 2
+
+# If you're rolling with Livereload, you might also want to add this...
+
+# activate :livereload, ...etc then...
+  ignore: [/\.es6/, /\.js\.map/]
+
+# Finally, we don't want Middleman putting the ES6 files and associated source maps into the build...
+
+ignore '*.es6'
+ignore '*.js.map'

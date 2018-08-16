@@ -14,3 +14,5 @@ gem 'jquery-middleman'
 
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
 
+
+gem "middleman-livereload", github: "middleman/middleman-livereload", ref: "d0ac967"
