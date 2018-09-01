@@ -1,16 +1,16 @@
-let slideIndex = 1;
-const slides = document.getElementsByClassName("mySlides");
-const dots = document.getElementsByClassName("dot");
-const back = document.querySelector(".slideshow__arrow-back");
-const next = document.querySelector(".slideshow__arrow-next");
+var sliderIndex = 1;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+var back = document.querySelector(".slideshow__arrow-back");
+var next = document.querySelector(".slideshow__arrow-next");
 
-showSlides(slideIndex);
+showSlides(sliderIndex);
 next.addEventListener("click", nextSlide);
 back.addEventListener("click", previousSlide);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(sliderIndex += n);
 }
 
 // Thumbnail image controls
@@ -27,17 +27,17 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+  var i;
+  if (n > slides.length) {sliderIndex = 1}
+    if (n < 1) {sliderIndex = slides.length}
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
         slides[i].className = slides[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].classList = 'mySlides active';
-      slides[slideIndex].classList = 'mySlides next';
+      slides[sliderIndex-1].classList = 'mySlides active';
+      slides[sliderIndex].classList = 'mySlides next';
       slides[slides.length-1].classList = 'mySlides previous';
-      dots[slideIndex-1].className += " active";
+      dots[sliderIndex-1].className += " active";
     }
 
     function resetSlides(){
@@ -55,10 +55,10 @@ function resetAllSlides(){
 function resetEvent(){
   next.addEventListener("click", nextSlide)
   back.addEventListener("click", previousSlide);
-  let index = 0;
+  var index = 0;
   document.querySelectorAll(".dot").forEach(function(element) {
     index += 1;
-    element.setAttribute("onclick", `currentSlide(${index})`);
+    element.setAttribute("onclick", "currentSlide("+index+")");
   });
 }
 
@@ -74,9 +74,9 @@ function setEventTimeOut(){
 function nextSlide() {
   setEventTimeOut();
 
-  const currentSlide = document.querySelector(".mySlides.active");
-  const currentDot = document.querySelector(".dot.active");
-  let nextSlide = document.querySelector(".mySlides.active").nextSibling.nextSibling;
+  var currentSlide = document.querySelector(".mySlides.active");
+  var currentDot = document.querySelector(".dot.active");
+  var nextSlide = document.querySelector(".mySlides.active").nextSibling.nextSibling;
 
   if(nextSlide == null){
     resetSlides()
@@ -95,7 +95,7 @@ function nextSlide() {
     document.querySelector(".mySlides.active").nextSibling.nextSibling.classList = ("mySlides next");
   };
 
-  let nextDot = currentDot.nextSibling.nextSibling;
+  var nextDot = currentDot.nextSibling.nextSibling;
   nextDot == null ? nextDot = dots[0] : nextDot;
   currentDot.classList.remove("active");
   nextDot.classList.add("active");
@@ -104,9 +104,9 @@ function nextSlide() {
 function previousSlide(){
   setEventTimeOut();
 
-  const currentSlide = document.querySelector(".mySlides.active");
-  const currentDot = document.querySelector(".dot.active");
-  let previousSlide = document.querySelector(".mySlides.active").previousSibling.previousSibling;
+  var currentSlide = document.querySelector(".mySlides.active");
+  var currentDot = document.querySelector(".dot.active");
+  var previousSlide = document.querySelector(".mySlides.active").previousSibling.previousSibling;
 
   if(previousSlide.tagName == undefined){
     resetSlides()
@@ -125,7 +125,7 @@ function previousSlide(){
     document.querySelector(".mySlides.active").previousSibling.previousSibling.classList = ("mySlides previous");
   };
 
-  let previousDot = currentDot.previousSibling.previousSibling;
+  var previousDot = currentDot.previousSibling.previousSibling;
   previousDot == null ? previousDot = dots[dots.length-1] : previousDot;
   currentDot.classList.remove("active");
   previousDot.classList.add("active");
