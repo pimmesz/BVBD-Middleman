@@ -35,7 +35,7 @@ activate :deploy do |deploy|
 end
 
 data.projects.each do |name, project|
-  proxy "/projects/#{name}.html", "/projects/show.html", locals: { description: project.description, name: project.name, images: project.images }, ignore: true
+  proxy "/projects/#{name}.html", "/projects/show.html", locals: { description: project.description, name: project.name, images: project.images, city: project.city_name }, ignore: true
 end
 
 activate :imageoptim do |options|

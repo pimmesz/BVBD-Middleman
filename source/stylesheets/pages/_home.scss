@@ -25,6 +25,9 @@
     padding: 0px;
     width: 33vw;
   }
+  .over-ons-container {
+    padding: 0px 50px 0px 50px;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -32,7 +35,9 @@
     padding: 0px 20px 0px 20px;
     width: 25vw;
     height: 100px;
-
+  }
+  .over-ons-container {
+    padding: 0px 200px 0px 200px;
   }
 }
 
@@ -78,7 +83,6 @@ label {
   text-align: center;
   margin-bottom: 100px;
   margin-top: 100px;
-  padding: 0px 70px 0px 70px;
 }
 
 .portrait-img {
@@ -94,7 +98,8 @@ label {
 .stappenplan-container {
   margin: 100px 0px 0px 0px;
 
-  background-color: $spanish-blue;
+  background-color: $logo-blue;
+  opacity: 0.8;
   -webkit-clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
   clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
 
