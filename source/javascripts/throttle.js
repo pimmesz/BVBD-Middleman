@@ -20,11 +20,3 @@ function throttle(fn, threshhold, scope) {
     }
   };
 }
-
-// --- Testing throttle ---
-
-// function text(){
-//   console.log("test");
-// }
-
-// setInterval(throttle(text, 5000), 100);
