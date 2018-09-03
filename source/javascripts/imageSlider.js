@@ -1,3 +1,4 @@
+if(window.location.pathname.includes("projects")){
 var sliderIndex = 1;
 var slides = document.getElementsByClassName("mySlides");
 var dots = document.getElementsByClassName("dot");
@@ -129,4 +130,5 @@ function previousSlide(){
   previousDot == null ? previousDot = dots[dots.length-1] : previousDot;
   currentDot.classList.remove("active");
   previousDot.classList.add("active");
+}
 }

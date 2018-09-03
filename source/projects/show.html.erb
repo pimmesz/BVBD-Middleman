@@ -6,13 +6,18 @@ title: Van Gorsel - Project
   <h3 class="text-center"><b><%= name %></b></h3>
   <h3 class="text-center"><b><%= city %></b></h3>
   <div class="slideshow">
-    <div class="slideshow__arrow-next"></div>
-    <div class="slideshow__arrow-back"></div>
+    <div class="slideshow__arrow-next">
+      <%= image_tag "arrow.png", :class => "arrow-white arrow__right"%>
+      <%= image_tag "arrow-white.png", :class => "arrow arrow__right"%>
+    </div>
+    <div class="slideshow__arrow-back">
+      <%= image_tag "arrow.png", :class => "arrow-white arrow__left"%>
+      <%= image_tag "arrow-white.png", :class => "arrow arrow__left"%>
+    </div>
     <div class="slideshow-container">
       <!-- Full-width images with number and caption text -->
       <% images.each_with_index do |image, index| %>
       <div class="mySlides inactive">
-        <div class="numbertext"><%= index + 1%> / <%= images.length %></div>
         <%= image_tag image, :class => "slider-img"%>
       </div>
       <% end %>

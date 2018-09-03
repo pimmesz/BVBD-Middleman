@@ -187,3 +187,18 @@ label {
     color: white;
   }
 }
+
+.fa-linkedin {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.contact-linkedin {
+  color: white;
+  &:hover {
+    color: white;
+  }
+  .fa-linkedin {
+    margin-top: 0px;
+  }
+}

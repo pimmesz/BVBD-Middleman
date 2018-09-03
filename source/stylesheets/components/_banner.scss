@@ -1,120 +1,126 @@
   .banner {
-  color: white;
-  text-align: center;
-  height: 100vh;
+    color: white;
+    text-align: center;
+    height: 100vh;
 
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h1 {
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-    color: $white;
-  }
-  p {
-    font-size: 20px;
-    font-weight: normal;
-    color: $white;
-    opacity: 0.8;
-    margin-bottom: 30px;
-  }
-  &__button{
-    display: inline-block;
-
-    cursor: pointer;
-    background-image: none;
-    color: #ffffff;
-    background: #EDAE49;
-    font-weight: 550;
-    padding: 10px;
-    border-radius: 2px;
-    height: 50px;
-    width: 150px;
-    box-shadow: 0px 1px 4px #000;
-   -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    &:hover {
-      color: white;
-      box-shadow: 0px 2px 8px #000;
-      opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      color: $white;
+      @media screen and (max-width: 600px) {
+        font-size: 30px;
+      }
     }
-    &:active {
-      box-shadow: 0px 0px 0px #000;
-      color: white;
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      color: $white;
+      opacity: 0.8;
+      margin-bottom: 30px;
+      @media screen and (max-width: 600px) {
+        font-size: 17px;
+      }
+    }
+    &__button{
+      display: inline-block;
+
+      cursor: pointer;
+      background-image: none;
+      color: #ffffff;
+      background: #EDAE49;
+      font-weight: 550;
+      padding: 10px;
+      border-radius: 2px;
+      height: 50px;
+      width: 150px;
+      box-shadow: 0px 1px 4px #000;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      &:hover {
+        color: white;
+        box-shadow: 0px 2px 8px #000;
+        opacity: 1;
+      }
+      &:active {
+        box-shadow: 0px 0px 0px #000;
+        color: white;
+      }
     }
   }
-}
 
-@media screen and (max-width: 600px) {
-  .banner-content{
-    margin: 0px;
-    width: 70vw;
+  @media screen and (max-width: 600px) {
+    .banner-content{
+      margin: 0px;
+      width: 70vw;
+    }
+    .banner-test-text{
+      top: 50px;
+    }
   }
-  .banner-test-text{
-    top: 50px;
+
+  @media screen and (min-width: 600px) {
+    .banner-content{
+      margin: 0px 50px 0px 50px;
+      width: 50vw;
+    }
   }
-}
 
-@media screen and (min-width: 600px) {
-  .banner-content{
-    margin: 0px 50px 0px 50px;
-    width: 50vw;
+  .banner-content {
+    position: relative;
   }
-}
 
-.banner-content {
-  position: relative;
-}
+  .overlay {
+    background: $spanish-blue;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+  }
 
-.overlay {
-  background: $spanish-blue;
-  opacity: 0.5;
-  width: 100vw;
-  height: 100vh;
-  z-index: 5;
-  position: absolute;
-}
+  .banner-test{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+  }
 
-.banner-test{
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-}
+  .banner-test#active{
+    left: 0%;
+    -webkit-transition: 2.5s;
+    -moz-transition: 2.5s;
+    -ms-transition: 2.5s;
+    -o-transition: 2.5s;
+    transition: 2.5s;
+  }
 
-.banner-test#active{
-  left: 0%;
-  -webkit-transition: 2.5s;
-  -moz-transition: 2.5s;
-  -ms-transition: 2.5s;
-  -o-transition: 2.5s;
-  transition: 2.5s;
-}
+  .banner-test#next{
+    left: 100%;
+  }
 
-.banner-test#next{
-  left: 100%;
-}
+  .banner-test#inactive{
+    left: -100%;
+    -webkit-transition: 2.5s;
+    -moz-transition: 2.5s;
+    -ms-transition: 2.5s;
+    -o-transition: 2.5s;
+    transition: 2.5s;
+  }
 
-.banner-test#inactive{
-  left: -100%;
-  -webkit-transition: 2.5s;
-  -moz-transition: 2.5s;
-  -ms-transition: 2.5s;
-  -o-transition: 2.5s;
-  transition: 2.5s;
-}
-
-.banner-test-text {
-  position: absolute;
-  z-index: 5;
-}
+  .banner-test-text {
+    position: absolute;
+    z-index: 5;
+  }
