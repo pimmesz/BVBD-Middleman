@@ -98,7 +98,7 @@ label {
 .stappenplan-container {
   margin: 100px 0px 0px 0px;
 
-  background-color: $logo-blue;
+  background-color: #00afad;
   opacity: 0.8;
   -webkit-clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
   clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
@@ -109,6 +109,10 @@ label {
 
   h2, p {
     color: white;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
   }
 }
 
