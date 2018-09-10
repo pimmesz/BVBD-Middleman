@@ -81,4 +81,11 @@
  &:hover{
   opacity: 0.7;
  }
+ p {
+  color: $rich-black;
+  opacity: 1;
+ }
+ h4 {
+  line-height: 0;
+ }
 }

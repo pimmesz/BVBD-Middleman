@@ -27,6 +27,9 @@
   }
   .over-ons-container {
     padding: 0px 50px 0px 50px;
+    &__text{
+      width: 80vw;
+    }
   }
 }
 
@@ -38,6 +41,9 @@
   }
   .over-ons-container {
     padding: 0px 200px 0px 200px;
+    &__text{
+      width: 50vw;
+    }
   }
 }
 

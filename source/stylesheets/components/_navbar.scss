@@ -17,7 +17,9 @@
   /* Navbar link */
   .navbar-van-gorsel-link {
     color: #ffffff;
+    font-family: $headers-font;
     font-size: 16px;
+    font-weight: 500;
   }
   .navbar-van-gorsel-link:hover {
     color: rgba(244, 96, 54, 1);
@@ -31,8 +33,10 @@
 
   /* Navbar link */
   .navbar-van-gorsel-link {
-    color: #616668;
+    color: $rich-black;
+    font-family: $headers-font;
     font-size: 16px;
+    font-weight: 500;
   }
 
   .navbar-van-gorsel-link:hover {

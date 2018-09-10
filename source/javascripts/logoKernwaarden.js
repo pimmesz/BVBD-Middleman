@@ -16,7 +16,7 @@
     logoBudget.style.opacity = 0.3;
     logoTechniek.style.opacity = 0.3;
 
-    transitionText("<p><b>Uitstraling</b><br>Een gebouw moet goed te gebruiken zijn en altijd er goed uitzien. Zowel bij oplevering als tijdens gebruik. We dagen u graag uit het maximale uit uw bouwproject te halen.</p>")
+    transitionText("<h4>Uitstraling</h4><br><p>Een gebouw moet goed te gebruiken zijn en altijd er goed uitzien. Zowel bij oplevering als tijdens gebruik. We dagen u graag uit het maximale uit uw bouwproject te halen.</p>")
   }
 
   function moveAmbitieIn(){
@@ -34,7 +34,7 @@
     logoAmbitie.style.opacity = 0.3;
     logoTechniek.style.opacity = 0.3;
 
-    transitionText("<p><b>Professionaliteit</b><br>We laten uw project graag soepel verlopen. We zijn open over alle facetten van het project.</p>")
+    transitionText("<h4>Professionaliteit</h4><br><p>We laten uw project graag soepel verlopen. We zijn open over alle facetten van het project.</p>")
   }
 
   function moveBudgetIn(){
@@ -51,7 +51,7 @@
     logoAmbitie.style.opacity = 0.3;
     logoBudget.style.opacity = 0.3;
 
-    transitionText("<p><b>Techniek</b><br>We informeren u graag over techniek en de consequenties van de techniek voor de uitstraling of duurzaamheid van uw gebouw.</p>")
+    transitionText("<h4>Techniek</h4><br><p>We informeren u graag over techniek en de consequenties van de techniek voor de uitstraling of duurzaamheid van uw gebouw.</p>")
   }
 
   function moveTechniekIn(){
