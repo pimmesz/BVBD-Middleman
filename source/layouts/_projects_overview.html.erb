@@ -1,11 +1,12 @@
 <!-- The work/projects overview grid as a partial -->
 <h2 class="text-center">Projecten</h2>
+<div class="card-main-container">
 <div class="card-container __mobile __desktop">
   <% data.projects.each do |name, project| %>
     <!-- Link changes depending on location (home or show) -->
     <% link_destination = current_page.path == "index.html" ? "projects/#{name}.html" : "#{name}.html" %>
     <!-- Link embodies the whole card -->
-    <% link_to link_destination do %>
+    <% link_to link_destination, :class => 'card-link' do %>
       <!-- Give the div the first image which is saved in projects.yml as a background -->
       <div class="card __mobile __desktop" style="background-image: linear-gradient(-225deg, rgba(1,111,185,0.1) 0%, rgba(1,111,185,0.3) 50%), url(<%= image_path project.images.first %>);">
         <div class="card-overlay">
@@ -15,4 +16,5 @@
       </div>
     <% end %>
   <% end %>
+</div>
 </div>

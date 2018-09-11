@@ -3,7 +3,7 @@
   var array = ["ambitie", "budget","techniek"]
 
   array.forEach(function(element) {
-    var waarde = window[element] = document.querySelector(".kernwaarde." + element)
+    var waarde = window[element] = document.querySelector(".kernwaarden." + element)
     var waardeLogo = window["logo"+element.capitalize()] = document.querySelector(".square"+array.indexOf(element))
 
     waardeLogo.addEventListener("mouseover", window["move" + element.capitalize() + "Out"]);

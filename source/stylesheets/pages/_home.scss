@@ -5,9 +5,12 @@
   justify-content: center;
   margin: 30px 0px 0px 0px;
   height: 100px;
+  @media screen and (max-width: 600px) {
+    margin: 0px;
+  }
 }
 
-.kernwaarde {
+.kernwaarden {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -17,6 +20,21 @@
   transition: all .5s;
   &:hover {
     cursor: pointer;
+  }
+  &__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__subtext {
+    color: $rich-black;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  &__subcontainer {
+    width: 50%;
   }
 }
 
@@ -104,7 +122,7 @@ label {
 .stappenplan-container {
   margin: 100px 0px 0px 0px;
 
-  background-color: #00afad;
+  background-color: #1AD2D7;
   opacity: 0.8;
   -webkit-clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
   clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);

@@ -1,29 +1,31 @@
-.card-container{
+.card-main-container{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-flow: row wrap;
-  width: 100%;
+  width: 80%;
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 600px) {
-  .card-container.__mobile {
-    flex-direction: column;
-  }
-  .card.__mobile {
-    width: 90vw;
+@media screen and (max-width: 800px) {
+  .card-link {
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 600px) {
-  .card-container.__desktop {
-    flex-direction: row;
-  }
-  .card.__desktop {
-    width: 40vw;
+@media screen and (min-width: 800px) {
+  .card-link {
+    width: 50%;
   }
 }
+
+
 
 .card {
   height: 50vh;
