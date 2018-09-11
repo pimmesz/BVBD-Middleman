@@ -19,6 +19,7 @@
 .contact-form-container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 600px) {
@@ -67,8 +68,13 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-
   color: $rich-black;
+  width: 90%;
+  margin-left: 5%;
+  @media screen and (min-width: 600px) {
+    width: 30%;  
+    margin-left: 0%;
+  }
 }
 
 form.contact-form {
@@ -76,6 +82,7 @@ form.contact-form {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 form.contact-form input {
